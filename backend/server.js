@@ -56,6 +56,7 @@ app.get("/expenses", async (req, res) => {
 
 app.post("/expenses", async (req, res) => {
     try {
+
         const { amount, date, note, categoryId } = req.body;
 
         if (!amount || !date) {
@@ -76,6 +77,7 @@ app.post("/expenses", async (req, res) => {
         console.error(err);
         res.status(500).json({ error: "Błąd dodawania wydatku" });
     }
+
 });
 
 app.get("/categories", async (req, res) => {
