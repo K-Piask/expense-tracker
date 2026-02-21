@@ -1,27 +1,9 @@
-require("dotenv").config();
-
 const express = require("express");
-const cors = require("cors");
+const prisma = require("../db/prisma");
 
+const router = express.Router();
 
-const { PrismaClient } = require("./generated/prisma");
-const { PrismaPg } = require("@prisma/adapter-pg")
-
-const adapter = new PrismaPg({
-    connectionString: process.env.DATABASE_URL,
-});
-
-const prisma = new PrismaClient({ adapter });
-
-const app = express();
-app.use(cors());
-app.use(express.json());
-
-app.get("/health", (req, res) => {
-    res.json({ ok: true, message: "Backend działa 🚀" });
-});
-
-app.get("/expenses", async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const { from, to, categoryId } = req.query;
 
@@ -54,7 +36,7 @@ app.get("/expenses", async (req, res) => {
     }
 });
 
-app.post("/expenses", async (req, res) => {
+router.post("/", async (req, res) => {
     try {
 
         const { amount, date, note, categoryId } = req.body;
@@ -80,41 +62,4 @@ app.post("/expenses", async (req, res) => {
 
 });
 
-app.get("/categories", async (req, res) => {
-    try {
-        const categories = await prisma.category.findMany({
-            where: { userId: 1 }, //tymczasowo
-            orderBy: { name: "asc" },
-        });
-        res.json(categories);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Błąd pobierania kategorii" });
-    }
-});
-
-app.post("/categories", async (req, res) => {
-    try {
-        const { name } = req.body;
-
-        if (!name || !String(name).trim()) {
-            return res.status(400).json({ error: "name jest wymagane" });
-        }
-
-        const category = await prisma.category.create({
-            data: {
-                name: String(name).trim(),
-                userId: 1, //tymczasowo
-            },
-        });
-        res.status(201).json(category);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Błąd dodawania kategorii" });
-    }
-});
-
-const PORT = 3000;
-app.listen(PORT, () => {
-    console.log(`API działa na http://localhost:${PORT}`);
-});
+module.exports = router;
