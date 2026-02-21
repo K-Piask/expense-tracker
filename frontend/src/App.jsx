@@ -68,6 +68,11 @@ export default function App() {
     setFilterTo("");
   };
 
+  const sectionStyle = {
+    borderTop: "1px solid #FFFFFF",
+    padding: "25px",
+  };
+
   return (
     <div style={{ padding: 15, fontFamily: "sans-serif" }}>
       <h1>Expense Tracker</h1>
@@ -77,26 +82,29 @@ export default function App() {
           <b>Błąd:</b> {error}
         </div>
       )}
-
-      <Filters
-        categories={categories}
-        filterCategoryId={filterCategoryId}
-        setFilterCategoryId={setFilterCategoryId}
-        filterFrom={filterFrom}
-        setFilterFrom={setFilterFrom}
-        filterTo={filterTo}
-        setFilterTo={setFilterTo}
-        onClear={clearFilters}
-      />
-
-      <ExpenseList
-        expenses={expenses}
-      />
-
-      <ExpenseForm
-        categories={categories}
-        onAdd={addExpense}
-      />
+      <section style={sectionStyle}>
+        <Filters
+          categories={categories}
+          filterCategoryId={filterCategoryId}
+          setFilterCategoryId={setFilterCategoryId}
+          filterFrom={filterFrom}
+          setFilterFrom={setFilterFrom}
+          filterTo={filterTo}
+          setFilterTo={setFilterTo}
+          onClear={clearFilters}
+        />
+      </section>
+      <section style={sectionStyle}>
+        <ExpenseList
+          expenses={expenses}
+        />
+      </section>
+      <section style={sectionStyle}>
+        <ExpenseForm
+          categories={categories}
+          onAdd={addExpense}
+        />
+      </section>
     </div>
   );
 }
