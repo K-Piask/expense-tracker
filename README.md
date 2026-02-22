@@ -1,4 +1,4 @@
-# Expense Tracker (React + Node + PostgreSQL)
+# Expense Tracker (React + Node.js + PostgreSQL)
 
 Aplikacja webowa do zarządzania wydatkami napisana w technologii React + Node.js + PostgreSQL.
 
