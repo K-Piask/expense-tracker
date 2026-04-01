@@ -68,43 +68,49 @@ export default function App() {
     setFilterTo("");
   };
 
-  const sectionStyle = {
-    borderTop: "1px solid #FFFFFF",
-    padding: "25px",
-  };
 
   return (
-    <div style={{ padding: 15, fontFamily: "sans-serif" }}>
-      <h1>Expense Tracker</h1>
 
-      {error && (
-        <div style={{ background: "#4547FF", padding: 10, marginBottom: 10 }}>
-          <b>Błąd:</b> {error}
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-linear-to-br from-slate-500 via-slate-700 to-slate-900 p-4 md:p-10">
+      <div className="w-full max-w-4xl flex flex-col gap-8">
+        <div className="relative py-4">
+          <h1 className=" relative z-10 mx-auto table text-center text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 
+        before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl">
+            Expense Tracker</h1>
         </div>
-      )}
-      <section style={sectionStyle}>
-        <Filters
-          categories={categories}
-          filterCategoryId={filterCategoryId}
-          setFilterCategoryId={setFilterCategoryId}
-          filterFrom={filterFrom}
-          setFilterFrom={setFilterFrom}
-          filterTo={filterTo}
-          setFilterTo={setFilterTo}
-          onClear={clearFilters}
-        />
-      </section>
-      <section style={sectionStyle}>
-        <ExpenseList
-          expenses={expenses}
-        />
-      </section>
-      <section style={sectionStyle}>
-        <ExpenseForm
-          categories={categories}
-          onAdd={addExpense}
-        />
-      </section>
+        {error && (
+          <div className="bg-red-400 border-4 border-black p-4 rounded-2xl font-black text-black shadow-[4px_4px_0px_0px_#000] flex justify-between">
+            <span>BŁĄD: {error}</span>
+            <button onClick={() => setError("")} className="hover:scale-110">×</button>
+          </div>
+        )}
+
+        <div className="flex flex-col gap-12">
+          <section className="neo-section">
+            <Filters
+              categories={categories}
+              filterCategoryId={filterCategoryId}
+              setFilterCategoryId={setFilterCategoryId}
+              filterFrom={filterFrom}
+              setFilterFrom={setFilterFrom}
+              filterTo={filterTo}
+              setFilterTo={setFilterTo}
+              onClear={clearFilters}
+            />
+          </section>
+          <section className="neo-section">
+            <ExpenseList
+              expenses={expenses}
+            />
+          </section>
+          <section className="neo-section bg-yellow-50">
+            <ExpenseForm
+              categories={categories}
+              onAdd={addExpense}
+            />
+          </section>
+        </div>
+      </div>
     </div>
   );
 }
