@@ -1,542 +1,202 @@
 [
   {
+    "externalId": "fop-wrapper:9102d647-7d28-4ec1-ab1d-591c20ae7bc2",
     "name": "Serek wiejski naturalny Piątnica 200 g",
     "promoDetails": "10% taniej",
     "priceUnit": "0.2kg (13,40 zł/kg)",
     "oldPrice": "2,98 zł - cena przed obniżką",
     "promoPrice": 2.68,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:31e54f69-80f9-419d-a026-0ba0a0d41f22",
     "name": "Mleko UHT 1.5% Auchan 1 l",
     "promoDetails": "14% taniej",
     "priceUnit": "1L (2,45 zł/l)",
     "oldPrice": "2,84 zł - najniższa cena",
     "promoPrice": 2.45,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:a4ffa3f5-72d4-446a-bd7b-fd2a18a027da",
     "name": "Mleko bez laktozy UHT 3.2% Mlekovita 1 l",
     "promoDetails": "28% taniej",
     "priceUnit": "1L (3,49 zł/l)",
     "oldPrice": "4,88 zł - najniższa cena",
     "promoPrice": 3.49,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:7a0fef05-34cd-4018-bfa5-ee5cb49ca94a",
     "name": "Kefir Krasnystaw 420 g",
     "promoDetails": "20% taniej",
     "priceUnit": "0.5L (5,10 zł/l)",
     "oldPrice": "3,19 zł - cena przed obniżką",
     "promoPrice": 2.55,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:86311c9d-43a5-45ee-98cf-2744c80b7e1d",
     "name": "Napój gazowany o smaku cola. Coca-Cola 330 ml",
     "promoDetails": "2+2 za grosz każdy",
     "priceUnit": "0.33L (13,61 zł/l)",
     "oldPrice": "-",
     "promoPrice": 4.49,
     "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:e202544c-191e-406c-a73f-9ca91337d0a5",
     "name": "Napój gazowany Zero Cukru o smaku cola nieposiadający wartości energetycznej PEPSI 1,5 l",
     "promoDetails": "2+1 za grosz",
     "priceUnit": "1.5L (5,59 zł/l)",
     "oldPrice": "-",
     "promoPrice": 8.38,
     "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:827582fb-6273-497b-ba17-f9fd90a24455",
     "name": "Napój gazowany o smaku cola nieposiadający wartości energetycznej. Zawiera substancje słodzące. Coca-Cola 330 ml",
     "promoDetails": "2+2 za grosz każdy",
     "priceUnit": "0.33L (13,61 zł/l)",
     "oldPrice": "-",
     "promoPrice": 4.49,
     "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:0a770652-1dee-4a3d-b5b2-ec803471d24d",
     "name": "Ziemniaki Pewni Dobrego 2 kg",
     "promoDetails": "25% taniej",
     "priceUnit": "2kg (3,00 zł/kg)",
     "oldPrice": "7,99 zł - cena przed obniżką",
     "promoPrice": 5.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:c467bf31-97b1-4a77-a2b2-ad8b90c10c08",
     "name": "Ser śmietankowy do smarowania Philadelphia 125 g",
     "promoDetails": "25% taniej",
     "priceUnit": "0.125kg (43,60 zł/kg)",
     "oldPrice": "7,28 zł - cena przed obniżką",
     "promoPrice": 5.45,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:f006a98b-bf33-4a4e-b183-6eb6e5ac6fd0",
     "name": "Baton orzechowy Knoppers 40 g",
     "promoDetails": "2+2 za grosz każdy",
     "priceUnit": "0.04kg (78,50 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 3.14,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:46"
+    "scrapedAt": "10.04.2026, 19:44:49"
   },
   {
+    "externalId": "fop-wrapper:039cd000-9143-4f4d-b24b-e21c43afc50d",
     "name": "Mus jabłko - brzoskwinia bez dodatku cukru Auchan 100 g",
     "promoDetails": "1+1 za grosz",
     "priceUnit": "0.1kg (19,90 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 1.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:48"
+    "scrapedAt": "10.04.2026, 19:44:51"
   },
   {
+    "externalId": "fop-wrapper:0db79734-be91-4988-bc89-7c3721b047f9",
     "name": "Serek twarogowy ziarnisty ze śmietanką Mlekovita 180 g",
     "promoDetails": "29% taniej",
     "priceUnit": "0.18kg (14,17 zł/kg)",
     "oldPrice": "3,58 zł - cena przed obniżką",
     "promoPrice": 2.55,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:48"
+    "scrapedAt": "10.04.2026, 19:44:51"
   },
   {
+    "externalId": "fop-wrapper:0c2180e1-1110-4d9b-ba3b-d31b1e8a23e2",
     "name": "Ogórki kiszone Stefanek 340 g",
     "promoDetails": "2 za 8,58 zł",
     "priceUnit": "0.34kg (14,68 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 4.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:48"
+    "scrapedAt": "10.04.2026, 19:44:51"
   },
   {
+    "externalId": "fop-wrapper:bde26d2e-3195-45d4-9320-d02c78a44a8e",
     "name": "Pomidory w kawałkach bez skórki w lekko zagęszczonym soku pomidorowym Primo Gusto 400 g",
     "promoDetails": "2+1 za grosz",
     "priceUnit": "0.4kg (12,95 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 5.18,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:48"
+    "scrapedAt": "10.04.2026, 19:44:51"
   },
   {
+    "externalId": "fop-wrapper:9eb6af2b-6704-447f-a59e-3ebf28a4514f",
     "name": "Mus Jabłko – Banan Auchan 100 g",
     "promoDetails": "1+1 za grosz",
     "priceUnit": "0.1kg (19,90 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 1.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:48"
+    "scrapedAt": "10.04.2026, 19:44:51"
   },
   {
+    "externalId": "fop-wrapper:fd5866bb-e9ef-4886-ae4d-d49fbc6db5b3",
     "name": "Mus jabłko truskawka Auchan 100 g",
     "promoDetails": "1+1 za grosz",
     "priceUnit": "0.1kg (19,90 zł/kg)",
     "oldPrice": "-",
     "promoPrice": 1.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:50"
+    "scrapedAt": "10.04.2026, 19:44:56"
   },
   {
+    "externalId": "fop-wrapper:be1a826b-bb33-4070-95e2-b7bbf2a5cff2",
     "name": "Jogobella Jogurt Jogobella exotic mix smaków Zott 150 g",
     "promoDetails": "19% taniej",
     "priceUnit": "0.15kg (11,60 zł/kg)",
     "oldPrice": "2,14 zł - cena przed obniżką",
     "promoPrice": 1.74,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:50"
+    "scrapedAt": "10.04.2026, 19:44:56"
   },
   {
+    "externalId": "fop-wrapper:127de43f-3129-4841-aa2d-da5be75685c6",
     "name": "Frytki karbowane Aviko 750 g",
     "promoDetails": "30% taniej",
     "priceUnit": "0.75kg (9,32 zł/kg)",
     "oldPrice": "9,98 zł - cena przed obniżką",
     "promoPrice": 6.99,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:50"
+    "scrapedAt": "10.04.2026, 19:44:56"
   },
   {
+    "externalId": "fop-wrapper:cc7750d7-3f90-459b-bc8f-6a829d70e26a",
     "name": "Chusteczki higieniczne 110 sztuk Regina sztuka",
     "promoDetails": "14% taniej",
     "priceUnit": "96 na paczkę (0,06 zł/szt.)",
     "oldPrice": "6,98 zł - najniższa cena",
     "promoPrice": 5.98,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:50"
+    "scrapedAt": "10.04.2026, 19:44:56"
   },
   {
+    "externalId": "fop-wrapper:ecedf8b8-55e2-44cb-a235-44de923263f2",
     "name": "Mango RTE Owoce Auchan sztuka",
     "promoDetails": "22% taniej",
     "priceUnit": "(7,75 zł/szt.)",
     "oldPrice": "9,99 zł - cena przed obniżką",
     "promoPrice": 7.75,
     "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:50"
-  },
-  {
-    "name": "Twaróg półtłusty Auchan 250 g",
-    "promoDetails": "10% taniej",
-    "priceUnit": "0.25kg (13,12 zł/kg)",
-    "oldPrice": "3,65 zł - cena przed obniżką",
-    "promoPrice": 3.28,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:53"
-  },
-  {
-    "name": "Łosoś atlantycki, wędzony na zimno, plastrowany Suempol 100 g",
-    "promoDetails": "20% taniej",
-    "priceUnit": "0.1kg (129,90 zł/kg)",
-    "oldPrice": "16,22 zł - cena przed obniżką",
-    "promoPrice": 12.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:53"
-  },
-  {
-    "name": "Mięso mielone z fileta piersi indyka Auchan 400 g",
-    "promoDetails": "24% taniej",
-    "priceUnit": "0.4kg (32,45 zł/kg)",
-    "oldPrice": "16,99 zł - cena przed obniżką",
-    "promoPrice": 12.98,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:53"
-  },
-  {
-    "name": "Kiełbasa z piersi kurczaka Morliny 400 g",
-    "promoDetails": "27% taniej",
-    "priceUnit": "0.4kg (22,48 zł/kg)",
-    "oldPrice": "12,39 zł - cena przed obniżką",
-    "promoPrice": 8.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:53"
-  },
-  {
-    "name": "Pomidor malinowy XL Warzywa Auchan na wagę ok 500g",
-    "promoDetails": "36% taniej",
-    "priceUnit": "0.5kg ~ porcja (21,99 zł/kg)",
-    "oldPrice": "17,25 zł - cena przed obniżką",
-    "promoPrice": 11,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:53"
-  },
-  {
-    "name": "Napój gazowany Zero o smaku cola Coca-Cola 330 ml",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.33L (13,61 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 4.49,
-    "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:11:54"
-  },
-  {
-    "name": "Napój gazowany Pepsi 1,5 l",
-    "promoDetails": "2+1 za grosz",
-    "priceUnit": "1.5L (5,72 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 8.58,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:54"
-  },
-  {
-    "name": "Kabanos drobiowy z dodatkiem wieprzowiny Tarczyński 105 g",
-    "promoDetails": "2+1 za grosz",
-    "priceUnit": "0.105kg (64,57 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 6.78,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:54"
-  },
-  {
-    "name": "Kabanosy wieprzowe Tarczyński 105 g",
-    "promoDetails": "2+1 za grosz",
-    "priceUnit": "0.105kg (61,33 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 6.44,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:54"
-  },
-  {
-    "name": "Śląskie oblaty Śląskie 30 g",
-    "promoDetails": "12% taniej",
-    "priceUnit": "0.03kg (58,33 zł/kg)",
-    "oldPrice": "1,98 zł - najniższa cena",
-    "promoPrice": 1.75,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:54"
-  },
-  {
-    "name": "Frytki proste Aviko 750 g",
-    "promoDetails": "30% taniej",
-    "priceUnit": "0.75kg (9,32 zł/kg)",
-    "oldPrice": "9,98 zł - cena przed obniżką",
-    "promoPrice": 6.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:57"
-  },
-  {
-    "name": "Najdłuższy ręcznik. Ręcznik kuchenny Regina 2 rolki",
-    "promoDetails": "31% taniej",
-    "priceUnit": "2 na paczkę (3,50 zł/szt.)",
-    "oldPrice": "10,18 zł - najniższa cena",
-    "promoPrice": 6.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:57"
-  },
-  {
-    "name": "Chusteczki Elegante 4 warstwy Regina 96 sztuk",
-    "promoDetails": "14% taniej",
-    "priceUnit": "96 na paczkę (0,06 zł/szt.)",
-    "oldPrice": "6,98 zł - najniższa cena",
-    "promoPrice": 5.98,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:57"
-  },
-  {
-    "name": "Oliwki czarne drylowane Auchan 320 g",
-    "promoDetails": "2 za 8,98 zł",
-    "priceUnit": "0.15kg (33,27 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 4.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:57"
-  },
-  {
-    "name": "Mus jabłko - gruszka Auchan 100 g",
-    "promoDetails": "1+1 za grosz",
-    "priceUnit": "0.1kg (19,90 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 1.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:11:57"
-  },
-  {
-    "name": "Chrupki ziemniaczane solone Monster Munch 100 g",
-    "promoDetails": "33% taniej",
-    "priceUnit": "0.1kg (49,80 zł/kg)",
-    "oldPrice": "7,38 zł - najniższa cena",
-    "promoPrice": 4.98,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:00"
-  },
-  {
-    "name": "Paluszki z solą Beskidzkie 240 g",
-    "promoDetails": "25% taniej",
-    "priceUnit": "0.24kg (14,54 zł/kg)",
-    "oldPrice": "4,64 zł - najniższa cena",
-    "promoPrice": 3.49,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:00"
-  },
-  {
-    "name": "Chleb tostowy pszenny krojony Dan Cake 250 g",
-    "promoDetails": "1+1 za grosz",
-    "priceUnit": "0.25kg (15,12 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 3.78,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:00"
-  },
-  {
-    "name": "Napój gazowany Zero o smaku cytrynowo-limonkowym Sprite 330 ml",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.33L (13,61 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 4.49,
-    "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:12:00"
-  },
-  {
-    "name": "7 Zbóż men jogurt z brzoskwinią gruszką i zbożami Bakoma 300 g",
-    "promoDetails": "27% taniej",
-    "priceUnit": "0.3kg (13,17 zł/kg)",
-    "oldPrice": "5,44 zł - cena przed obniżką",
-    "promoPrice": 3.95,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:00"
-  },
-  {
-    "name": "Gryzzale kabanosy z kurczaka Tarczyński 90 g",
-    "promoDetails": "2+1 za grosz",
-    "priceUnit": "0.09kg (76,00 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 6.84,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Twaróg chudy Auchan 250 g",
-    "promoDetails": "10% taniej",
-    "priceUnit": "0.25kg (13,12 zł/kg)",
-    "oldPrice": "3,65 zł - cena przed obniżką",
-    "promoPrice": 3.28,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Passata intenso zioła włoskie Dawtona 500 g",
-    "promoDetails": "3 za 11,94 zł",
-    "priceUnit": "0.5kg (13,08 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 6.54,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Szynka Szwarcwaldzka Auchan 80 g",
-    "promoDetails": "2 za 11,98 zł",
-    "priceUnit": "0.08kg (93,63 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 7.49,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Napój gazowany Zero o smaku pomarańczowym Fanta 330 ml",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.33L (13,61 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 4.49,
-    "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Baton orzeszki ziemne Knoppers 40 g",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.04kg (78,50 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 3.14,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Mango Auchan 400 g",
-    "promoDetails": "2 za 14,98 zł",
-    "priceUnit": "0.4kg (22,35 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 8.94,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Mus jogurt banan truskawka makakuja mąka ryżowa Auchan 100 g",
-    "promoDetails": "1+1 za grosz",
-    "priceUnit": "0.1kg (7,90 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 0.79,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Baton kokosowy Knoppers 40 g",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.04kg (78,50 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 3.14,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Paski z fileta z piersi kurczaka Auchan 400 g",
-    "promoDetails": "20% taniej",
-    "priceUnit": "0.4kg (34,95 zł/kg)",
-    "oldPrice": "17,39 zł - cena przed obniżką",
-    "promoPrice": 13.98,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:03"
-  },
-  {
-    "name": "Szynka od Szwagra wieprzowa Krakus 120 g",
-    "promoDetails": "35% taniej",
-    "priceUnit": "0.12kg (57,92 zł/kg)",
-    "oldPrice": "10,69 zł - cena przed obniżką",
-    "promoPrice": 6.95,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:04"
-  },
-  {
-    "name": "Oliwki zielone drylowane Auchan 320 g",
-    "promoDetails": "2 za 8,98 zł",
-    "priceUnit": "0.15kg (33,27 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 4.99,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:04"
-  },
-  {
-    "name": "Musztarda sarepska Kamis 185 g",
-    "promoDetails": "8% taniej",
-    "priceUnit": "0.185kg (18,81 zł/kg)",
-    "oldPrice": "3,78 zł - najniższa cena",
-    "promoPrice": 3.48,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:04"
-  },
-  {
-    "name": "Serek śmietankowy light 30% mniej tłuszczu Philadelphia 125 g",
-    "promoDetails": "25% taniej",
-    "priceUnit": "0.125kg (43,60 zł/kg)",
-    "oldPrice": "7,28 zł - cena przed obniżką",
-    "promoPrice": 5.45,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:04"
-  },
-  {
-    "name": "Napój gazowany o smaku cola i wiśniowym Coca-Cola 330 ml",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.33L (13,61 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 4.49,
-    "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:12:04"
-  },
-  {
-    "name": "Monte deser mleczny z czekoladą, orzechami wafelkami lub płatkami w czekoladzie mix Zott 125 g",
-    "promoDetails": "1+1 za grosz",
-    "priceUnit": "0.125kg (36,72 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 4.59,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:07"
-  },
-  {
-    "name": "Hummus klasyczny Perla 120 g",
-    "promoDetails": "17% taniej",
-    "priceUnit": "0.12kg (37,42 zł/kg)",
-    "oldPrice": "5,39 zł - cena przed obniżką",
-    "promoPrice": 4.49,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:07"
-  },
-  {
-    "name": "Deser mleczny o smaku czekoladowym z bitą śmietanką Ehrmann 190 g",
-    "promoDetails": "37% taniej",
-    "priceUnit": "0.19kg (15,53 zł/kg)",
-    "oldPrice": "4,68 zł - cena przed obniżką",
-    "promoPrice": 2.95,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:07"
-  },
-  {
-    "name": "Napój gazowy o smaku cytryna-limonka Sprite 330 ml",
-    "promoDetails": "2+2 za grosz każdy",
-    "priceUnit": "0.33L (13,61 zł/l)",
-    "oldPrice": "-",
-    "promoPrice": 4.49,
-    "depositPrice": "+kaucja 0,50 zł",
-    "scrapedAt": "10.04.2026, 17:12:07"
-  },
-  {
-    "name": "Serek śmietankowy z łososiem i koperkiem Łaciaty 135 g",
-    "promoDetails": "2 za 6,00 zł",
-    "priceUnit": "0.135kg (27,26 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 3.68,
-    "depositPrice": "-",
-    "scrapedAt": "10.04.2026, 17:12:07"
+    "scrapedAt": "10.04.2026, 19:44:56"
   }
 ]

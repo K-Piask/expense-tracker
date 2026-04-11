@@ -36,7 +36,7 @@ async function scrapeAuchanPromotions() {
             }
         });
 
-        const MAX_PRODUCTS = 60;
+        const MAX_PRODUCTS = 20;
 
         const extractedData = await page.evaluate(async (limit) => {
             const delay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.random() * (max - min) + min));
@@ -69,6 +69,7 @@ async function scrapeAuchanPromotions() {
                             const rawDeposit = depositElement ? formatText(depositElement.querySelector("span")) : "-";
 
                             productsMap.set(productId, {
+                                externalId: productId,
                                 name: productName,
                                 promoDetails: formatText(offerElement) || "-",
                                 priceUnit: formatText(unitElement) || "-",
