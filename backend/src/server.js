@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const expensesRouter = require("./routes/expenses");
 const categoriesRouter = require("./routes/categories");
+const promotionsRouter = require("./routes/promotions");
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/health", (req, res) => {
 
 app.use("/expenses", expensesRouter);
 app.use("/categories", categoriesRouter);
+app.use("/api/promotions", promotionsRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {
