@@ -60,6 +60,8 @@ model Expense {
 
   expenseItems ExpenseItem[]
   
+  shoppingListId Int? @unique
+  shoppingList ShoppingList? @relation(fields: [shoppingListId], references: [id])
 }
 
 model Promotion {
@@ -102,4 +104,6 @@ model ShoppingList {
   user          User      @relation(fields: [userId], references: [id])
 
   shoppingListItems   ShoppingListItem[]
+
+  expense Expense?
 }

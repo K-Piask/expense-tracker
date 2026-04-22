@@ -17,7 +17,7 @@ app.get("/health", (req, res) => {
     res.json({ ok: true, message: "Backend działa" });
 });
 
-app.use("/expenses", expensesRouter);
+app.use("/api/expenses", expensesRouter);
 app.use("/categories", categoriesRouter);
 app.use("/api/promotions", promotionsRouter);
 app.use("/api/shopping-lists", shoppingListRouter);
