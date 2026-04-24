@@ -7,6 +7,7 @@ const expensesRouter = require("./routes/expenses");
 const categoriesRouter = require("./routes/categories");
 const promotionsRouter = require("./routes/promotions");
 const shoppingListRouter = require("./routes/shoppingLists")
+const authRouter = require("./routes/auth")
 
 const app = express();
 
@@ -18,9 +19,10 @@ app.get("/health", (req, res) => {
 });
 
 app.use("/api/expenses", expensesRouter);
-app.use("/categories", categoriesRouter);
+app.use("/api/categories", categoriesRouter);
 app.use("/api/promotions", promotionsRouter);
 app.use("/api/shopping-lists", shoppingListRouter);
+app.use("/api/auth", authRouter);
 
 const PORT = 3000;
 app.listen(PORT, () => {

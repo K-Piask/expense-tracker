@@ -2,12 +2,13 @@ const express = require("express");
 const router = express.Router();
 
 const prisma = require("../db/prisma");
+const auth = require("../middleware/auth");
 
-router.get("/", async (req, res) => {
+router.get("/", auth, async (req, res) => {
     try {
         const shoppingList = await prisma.shoppingList.findMany({
             where: {
-                userId: 1,
+                userId: req.user.id,
                 isDone: false,
             },
             include: { shoppingListItems: true }
@@ -19,13 +20,13 @@ router.get("/", async (req, res) => {
     }
 });
 
-router.post("/", async (req, res) => {
+router.post("/", auth, async (req, res) => {
     try {
-        const { name, shoppingListItems } = req.body;
+        const { name, shoppingListItems = [] } = req.body;
         const shoppingList = await prisma.shoppingList.create({
             data: {
                 name: String(name).trim(),
-                userId: 1,
+                userId: req.user.id,
                 shoppingListItems: {
                     create: shoppingListItems
                 }
@@ -36,7 +37,84 @@ router.post("/", async (req, res) => {
         console.log(err);
         res.status(500).json({ error: "Error inserting shopping list" });
     }
-})
+});
 
+router.delete("/:id", auth, async (req, res) => {
+    try {
+        const result = await prisma.shoppingList.deleteMany({
+            where: {
+                id: Number(req.params.id),
+                userId: req.user.id
+            }
+        });
+        if (result.count === 0) {
+            return res.status(404).json({ error: "Shopping list not found or unathorized" })
+        }
+
+        res.status(200).json({
+            message: "Shopping list has been deleted",
+            deletedId: Number(req.params.id)
+        })
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "Error deleting shopping list" })
+    }
+});
+
+router.put("/:id", auth, async (req, res) => {
+    try {
+        const { name, isDone, shoppingListItems = [] } = req.body;
+        const listId = Number(req.params.id);
+
+        const existingList = await prisma.shoppingList.findFirst({
+            where: {
+                id: listId,
+                userId: Number(req.user.id)
+            }
+        });
+
+        if (!existingList) {
+            return res.status(404).json({ error: "Shopping list not found or unauthorized" })
+        }
+
+        const itemsToCreate = shoppingListItems.filter(item => item.id == null);
+        const itemsToUpdate = shoppingListItems.filter(item => item.id != null);
+        const incomingIds = itemsToUpdate.map(item => item.id);
+
+        const updatedList = await prisma.shoppingList.update({
+            where: {
+                id: listId
+            },
+            data: {
+                name: name,
+                isDone: isDone,
+                shoppingListItems: {
+                    deleteMany: {
+                        id: {
+                            notIn: incomingIds
+                        }
+                    },
+                    update: itemsToUpdate.map(item => ({
+                        where: {
+                            id: item.id
+                        },
+                        data: {
+                            name: item.name
+                        }
+                    })),
+                    create: itemsToCreate.map(item => ({
+                        name: item.name
+                    }))
+                }
+            },
+            include: { shoppingListItems: true }
+        });
+        res.status(200).json(updatedList);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({ error: "Error updating shopping list" })
+    }
+});
 
 module.exports = router;
