@@ -56,7 +56,7 @@ export default function ExpenseList({ expenses }) {
 
 
                                 <td className="px-4 py-4 text-right font-black text-2xl group-hover:text-blue-600 transition-colors">
-                                    {(expense.amount / 100).toFixed(2)}
+                                    {expense.totalAmount}
                                     <span className="text-xs ml-1 font-bold">PLN</span>
                                 </td>
                             </tr>

@@ -37,7 +37,7 @@ router.get("/", auth, async (req, res) => {
         res.json(expenses);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "Error loading expenses" });
+        res.status(500).json({ error: "Błąd podczas pobierania wydatków." });
     }
 });
 
@@ -47,7 +47,7 @@ router.post("/", auth, async (req, res) => {
         const { date, note, categoryId, expenseItems = [], shoppingListId } = req.body;
 
         if (!date) {
-            return res.status(400).json({ error: "date is required" });
+            return res.status(400).json({ error: "Data jest wymagana." });
         }
 
         const calculatedTotal = expenseItems.reduce((sum, item) => sum + Number(item.amount), 0);
@@ -82,7 +82,7 @@ router.post("/", auth, async (req, res) => {
         res.status(201).json(result);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "Error inserting expense" });
+        res.status(500).json({ error: "Błąd podczas dodawania wydatku." });
     }
 
 });
@@ -96,16 +96,16 @@ router.delete("/:id", auth, async (req, res) => {
             }
         });
         if (result.count === 0) {
-            return res.status(404).json({ error: "Expense not found or unauthorized" })
+            return res.status(404).json({ error: "Nie znaleziono wydatku lub brak uprawnień." })
         }
 
         res.status(200).json({
-            message: "Expense has been deleted",
+            message: "Wydatek został usunięty.",
             deletedId: Number(req.params.id)
         })
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error deleting expense" })
+        res.status(500).json({ error: "Błąd podczas usuwania wydatku." })
     }
 });
 
@@ -122,7 +122,7 @@ router.put("/:id", auth, async (req, res) => {
         });
 
         if (!existingExpense) {
-            return res.status(404).json({ error: "Expense not found or unauthorized" });
+            return res.status(404).json({ error: "Nie znaleziono wydatku lub brak uprawnień." });
         }
 
         const calculatedTotal = expenseItems.reduce((sum, item) => sum + Number(item.amount), 0);
@@ -162,7 +162,7 @@ router.put("/:id", auth, async (req, res) => {
         res.status(200).json(updatedExpense);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error updating expense" })
+        res.status(500).json({ error: "Błąd podczas aktualizacji wydatku." })
     }
 });
 

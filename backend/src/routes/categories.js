@@ -13,7 +13,7 @@ router.get("/", auth, async (req, res) => {
         res.json(categories);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "Error loading categories" });
+        res.status(500).json({ error: "Błąd podczas pobierania kategorii." });
     }
 });
 
@@ -22,7 +22,7 @@ router.post("/", auth, async (req, res) => {
         const { name } = req.body;
 
         if (!name || !String(name).trim()) {
-            return res.status(400).json({ error: "name is required" });
+            return res.status(400).json({ error: "Nazwa jest wymagana." });
         }
 
         const category = await prisma.category.create({
@@ -34,7 +34,7 @@ router.post("/", auth, async (req, res) => {
         res.status(201).json(category);
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: "Error inserting category" });
+        res.status(500).json({ error: "Błąd podczas dodawania kategorii." });
     }
 });
 
@@ -47,15 +47,15 @@ router.delete("/:id", auth, async (req, res) => {
             }
         });
         if (result.count === 0) {
-            return res.status(404).json({ error: "Category not found or unauthorized" })
+            return res.status(404).json({ error: "Nie znaleziono kategorii lub brak uprawnień." })
         }
         res.status(200).json({
-            message: "Category has been deleted",
+            message: "Kategoria została usunięta.",
             deletedId: Number(req.params.id)
         })
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error deleting category" })
+        res.status(500).json({ error: "Błąd podczas usuwania kategorii." })
     }
 });
 
@@ -72,7 +72,7 @@ router.put("/:id", auth, async (req, res) => {
             }
         });
         if (!existingCategory) {
-            return res.status(404).json({ error: "Category not found or unauthorized" });
+            return res.status(404).json({ error: "Nie znaleziono kategorii lub brak uprawnień." });
         }
         const updatedCategory = await prisma.category.update({
             where: {
@@ -85,7 +85,7 @@ router.put("/:id", auth, async (req, res) => {
         res.status(200).json(updatedCategory);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error updating category" })
+        res.status(500).json({ error: "Błąd podczas aktualizacji kategorii." })
     }
 });
 

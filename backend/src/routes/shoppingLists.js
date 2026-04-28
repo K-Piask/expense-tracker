@@ -16,7 +16,7 @@ router.get("/", auth, async (req, res) => {
         res.json(shoppingList);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error loading shopping lists" });
+        res.status(500).json({ error: "Błąd podczas pobierania list zakupów." });
     }
 });
 
@@ -35,7 +35,7 @@ router.post("/", auth, async (req, res) => {
         res.status(201).json(shoppingList);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error inserting shopping list" });
+        res.status(500).json({ error: "Błąd podczas dodawania listy zakupów." });
     }
 });
 
@@ -48,17 +48,17 @@ router.delete("/:id", auth, async (req, res) => {
             }
         });
         if (result.count === 0) {
-            return res.status(404).json({ error: "Shopping list not found or unathorized" })
+            return res.status(404).json({ error: "Nie znaleziono listy zakupów lub brak uprawnień." })
         }
 
         res.status(200).json({
-            message: "Shopping list has been deleted",
+            message: "Lista zakupów została usunięta.",
             deletedId: Number(req.params.id)
         })
 
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error deleting shopping list" })
+        res.status(500).json({ error: "Błąd podczas usuwania listy zakupów." })
     }
 });
 
@@ -75,7 +75,7 @@ router.put("/:id", auth, async (req, res) => {
         });
 
         if (!existingList) {
-            return res.status(404).json({ error: "Shopping list not found or unauthorized" })
+            return res.status(404).json({ error: "Nie znaleziono listy zakupów lub brak uprawnień." })
         }
 
         const itemsToCreate = shoppingListItems.filter(item => item.id == null);
@@ -113,7 +113,7 @@ router.put("/:id", auth, async (req, res) => {
         res.status(200).json(updatedList);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Error updating shopping list" })
+        res.status(500).json({ error: "Błąd podczas aktualizacji listy zakupów." })
     }
 });
 

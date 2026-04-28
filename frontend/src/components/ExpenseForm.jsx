@@ -14,11 +14,11 @@ export default function ExpenseForm({ categories, onAdd }) {
         if (!formDate) return;
 
         //zamiana zł na grosze
-        const amountGrosze = Math.round(Number(formAmount) * 100);
+        const amountZloty = Math.round(Number(formAmount) * 100);
 
 
         const payload = {
-            amount: amountGrosze,
+            totalAmount: amountZloty,
             date: formDate,
             note: formNote || null,
             categoryId: formCategoryId ? Number(formCategoryId) : null,

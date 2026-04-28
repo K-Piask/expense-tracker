@@ -10,8 +10,17 @@ router.post("/register", async (req, res) => {
     try {
         const { email, password } = req.body;
         if (!email || !password) {
-            return res.status(400).json({ error: "email and password are required" });
+            return res.status(400).json({ error: "Adres e-mail i hasło są wymagane." });
         }
+
+        const existingUser = await prisma.user.findUnique({
+            where: { email: email }
+        });
+
+        if (existingUser) {
+            return res.status(400).json({ error: "Użytkownik z tym adresem e-mail już istnieje." });
+        }
+
         const hashedPassword = await bcrypt.hash(password, 10);
         const user = await prisma.user.create({
             data: {
@@ -23,7 +32,7 @@ router.post("/register", async (req, res) => {
         res.status(201).json(user);
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Registration failed" })
+        res.status(500).json({ error: "Rejestracja nie powiodła się." })
     }
 });
 
@@ -36,17 +45,17 @@ router.post("/login", async (req, res) => {
             }
         });
         if (!user) {
-            return res.status(401).json({ error: "Invalid email or password" });
+            return res.status(401).json({ error: "Nieprawidłowy adres e-mail lub hasło" });
         }
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(401).json({ error: "Invalid email or password" });
+            return res.status(401).json({ error: "Nieprawidłowy adres e-mail lub hasło" });
         }
         const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1d' });
         res.status(200).json({ token });
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: "Login failed" })
+        res.status(500).json({ error: "Logowanie nie powiodło się" })
     }
 
 
