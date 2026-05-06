@@ -40,8 +40,8 @@ export default function Register() {
     return (
         <div className="flex flex-col items-center justify-start min-h-screen w-full bg-linear-to-br from-slate-500 via-slate-700 to-slate-900 p-4 md:p-10">
             <div className="w-full max-w-2xl flex flex-col gap-6">
-                <div className="relative py-4">
-                    <h1 className=" relative z-10 mx-auto table text-center text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 my-6 
+                <div className="relative py-1">
+                    <h1 className=" relative z-10 mx-auto table text-center text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 mb-6 
         before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl">
                         Expense Tracker</h1>
                 </div>

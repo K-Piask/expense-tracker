@@ -36,7 +36,7 @@ async function scrapeAuchanPromotions() {
             }
         });
 
-        const MAX_PRODUCTS = 20;
+        const MAX_PRODUCTS = 100;
 
         const extractedData = await page.evaluate(async (limit) => {
             const delay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.random() * (max - min) + min));

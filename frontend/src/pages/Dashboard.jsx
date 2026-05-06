@@ -39,13 +39,20 @@ export default function Dashboard() {
 
         fetch(`${API}/api/categories`, { headers })
             .then((res) => {
-                if (res.status === 401) {
+                if (res.status === 401 || res.status === 403) {
+                    localStorage.removeItem('token');
                     navigate('/login');
                     throw new Error("Wygasła sesja");
                 }
                 return res.json();
             })
-            .then(setCategories)
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    setCategories(data);
+                } else {
+                    setCategories([]);
+                }
+            })
             .catch(() => setError("Nie udało się pobrać kategorii"));
     }, [navigate]);
 
@@ -67,13 +74,20 @@ export default function Dashboard() {
 
         return fetch(url, { headers })
             .then((res) => {
-                if (res.status == 401) {
+                if (res.status == 401 || res.status === 403) {
+                    localStorage.removeItem('token');
                     navigate('/login');
                     throw new Error("Wygasła sesja");
                 }
                 return res.json();
             })
-            .then(setExpenses)
+            .then((data) => {
+                if (Array.isArray(data)) {
+                    setExpenses(data);
+                } else {
+                    setExpenses([]);
+                }
+            })
             .catch(() => setError("Nie udało się pobrać wydatków"));
     };
 

@@ -1,202 +1,1002 @@
 [
   {
-    "externalId": "fop-wrapper:c5eab574-b42a-49c4-898f-d9282fcedb42",
-    "name": "Mleko UHT 3.2% Auchan 1 l",
-    "promoDetails": "9% taniej",
-    "priceUnit": "1L (2,99 zł/l)",
-    "oldPrice": "3,28 zł - najniższa cena",
-    "promoPrice": 2.99,
+    "externalId": "fop-wrapper:9129b8d3-5439-48d7-bb4c-69a482a63fd8",
+    "name": "Masło ekstra Polskie 82% tłuszczu Mlekovita 200 g",
+    "promoDetails": "59% taniej",
+    "priceUnit": "0.2kg (12,25 zł/kg)",
+    "oldPrice": "5,98 zł - cena przed obniżką",
+    "promoPrice": 2.45,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:d49adfa5-e341-417f-a2ad-4a7eb5388a7c",
-    "name": "Ser gouda w plastrach Mlekpol 150 g",
-    "promoDetails": "44% taniej",
-    "priceUnit": "0.15kg (23,87 zł/kg)",
-    "oldPrice": "6,34 zł - cena przed obniżką",
-    "promoPrice": 3.58,
+    "externalId": "fop-wrapper:a2e2bee8-3b2e-467f-8e02-6bbeb121cc51",
+    "name": "Mleko UHT 3.2% bez laktozy 1l Auchan 1 l",
+    "promoDetails": "16% taniej",
+    "priceUnit": "1L (4,00 zł/l)",
+    "oldPrice": "4,78 zł - najniższa cena",
+    "promoPrice": 4,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:dbf04a01-884e-4b82-a59e-0144e23f8eac",
-    "name": "Mleko UHT 3,2% Auchan 1l",
-    "promoDetails": "9% taniej",
-    "priceUnit": "1L (2,99 zł/l)",
-    "oldPrice": "3,28 zł - najniższa cena",
-    "promoPrice": 2.99,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
+    "externalId": "fop-wrapper:fa0bce2e-7ee7-41ec-b51c-6f3b7b73ec41",
+    "name": "Napój gazowany bez cukru Zero Coca-Cola 1.5 l",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "1.5L (5,92 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 8.88,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:2588f25e-2066-4077-99cc-f31f6699c6fe",
-    "name": "Awokado kaliber 22 Owoce Auchan sztuka",
-    "promoDetails": "39% taniej",
+    "externalId": "fop-wrapper:a2d56fdb-e159-49c4-aa27-1a22c2b7a51f",
+    "name": "BIO Ogórek długi Warzywa Auchan sztuka",
+    "promoDetails": "64% taniej",
     "priceUnit": "(2,49 zł/szt.)",
-    "oldPrice": "4,09 zł - cena przed obniżką",
+    "oldPrice": "6,89 zł - cena przed obniżką",
     "promoPrice": 2.49,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:c7c6420d-98b1-4b2e-a7df-135cde6ab33a",
-    "name": "Ser Królewski z Kolna w plastrach Mlekpol 150 g",
-    "promoDetails": "44% taniej",
-    "priceUnit": "0.15kg (23,87 zł/kg)",
-    "oldPrice": "6,34 zł - cena przed obniżką",
-    "promoPrice": 3.58,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
-  },
-  {
-    "externalId": "fop-wrapper:71fcb4fc-a989-4f5a-b443-6928cb10a304",
-    "name": "Cukinia Warzywa Auchan na wagę ok. 600 g",
-    "promoDetails": "51% taniej",
-    "priceUnit": "0.6kg ~ porcja (6,99 zł/kg)",
-    "oldPrice": "8,57 zł - cena przed obniżką",
-    "promoPrice": 4.19,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
-  },
-  {
-    "externalId": "fop-wrapper:e8c245bb-f611-4dc5-a26e-2eca02292869",
-    "name": "Monte Deser mleczny z czekoladą i orzechami Zott 150 g",
-    "promoDetails": "2 za 5,96 zł",
-    "priceUnit": "0.15kg (25,20 zł/kg)",
-    "oldPrice": "-",
-    "promoPrice": 3.78,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
-  },
-  {
-    "externalId": "fop-wrapper:ba220169-6859-4e98-9715-d5f7602d2160",
-    "name": "Ręcznik Tornado 3-warstwowy Foxy 1 rolka",
-    "promoDetails": "8% taniej",
-    "priceUnit": "(10,98 zł/szt.)",
-    "oldPrice": "11,98 zł - najniższa cena",
-    "promoPrice": 10.98,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
-  },
-  {
-    "externalId": "fop-wrapper:46dc28bc-4424-4b78-87f6-af9850fa899e",
-    "name": "Winogrona różowe Owoce Auchan na wagę ok. 500 g",
-    "promoDetails": "40% taniej",
-    "priceUnit": "0.5kg ~ porcja (11,99 zł/kg)",
-    "oldPrice": "10,00 zł - cena przed obniżką",
-    "promoPrice": 6,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
-  },
-  {
-    "externalId": "fop-wrapper:5f42d539-6f1c-4c19-bde0-d7456a7013ee",
-    "name": "Truskawki bez szypułek Auchan 450 g",
-    "promoDetails": "13% taniej",
-    "priceUnit": "0.45kg (13,31 zł/kg)",
-    "oldPrice": "6,85 zł - cena przed obniżką",
+    "externalId": "fop-wrapper:19f00df8-5835-4bdc-af30-9337d15f9888",
+    "name": "Ser żółty Królewski plastry Sierpc 150 g",
+    "promoDetails": "31% taniej",
+    "priceUnit": "0.15kg (39,93 zł/kg)",
+    "oldPrice": "8,74 zł - cena przed obniżką",
     "promoPrice": 5.99,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:01"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:b0a85978-3a92-4268-910a-592dda5f2208",
-    "name": "Ziemniaki luz Warzywa Auchan na wagę ok. 1kg",
-    "promoDetails": "25% taniej",
-    "priceUnit": "1kg ~ porcja (1,48 zł/kg)",
-    "oldPrice": "1,98 zł - cena przed obniżką",
-    "promoPrice": 1.48,
+    "externalId": "fop-wrapper:8c133ec9-f85d-4dec-8bc2-6cb2518e7019",
+    "name": "Papier toaletowy 3 warstwy Auchan 10 rolek",
+    "promoDetails": "7% taniej",
+    "priceUnit": "10 na paczkę (1,30 zł/szt.)",
+    "oldPrice": "13,98 zł - najniższa cena",
+    "promoPrice": 12.98,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:03"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:75ca1068-81f0-48c1-931a-76d8a5aba0bc",
-    "name": "Parówki classic Berlinki 270 g",
-    "promoDetails": "2 za 9,58 zł",
-    "priceUnit": "0.27kg (20,22 zł/kg)",
+    "externalId": "fop-wrapper:dc1e2e38-3d4e-4446-ac62-a30d86f7acbd",
+    "name": "Napój gazowany o smaku cola Coca-Cola 1,5 l",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "1.5L (5,92 zł/l)",
     "oldPrice": "-",
-    "promoPrice": 5.46,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:03"
+    "promoPrice": 8.88,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:47a38959-bdd4-4720-b9af-8120fd907eb1",
-    "name": "Koncentrat pomidorowy 30 % Pudliszki 190 g",
-    "promoDetails": "3 za 10,44 zł",
-    "priceUnit": "0.19kg (26,21 zł/kg)",
+    "externalId": "fop-wrapper:f68fff50-05cd-4a43-ac4e-e8bc9e61449c",
+    "name": "Mięso mielone wieprzowo-wołowe MAP Auchan 500 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.5kg (31,98 zł/kg)",
     "oldPrice": "-",
-    "promoPrice": 4.98,
+    "promoPrice": 15.99,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:03"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:d1201919-72b1-48b1-a4d6-b4ea692d89b7",
-    "name": "Udo z kurczaka bez kości MAP Auchan na wagę ok. 500 g",
-    "promoDetails": "8% taniej",
-    "priceUnit": "0.5kg ~ porcja (21,98 zł/kg)",
-    "oldPrice": "11,99 zł - cena przed obniżką",
-    "promoPrice": 10.99,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:03"
-  },
-  {
-    "externalId": "fop-wrapper:0db6ef94-96c4-4159-8d13-e98c6c9d84aa",
-    "name": "Ser salami w plastrach Mlekpol 150 g",
-    "promoDetails": "44% taniej",
-    "priceUnit": "0.15kg (23,87 zł/kg)",
-    "oldPrice": "6,34 zł - cena przed obniżką",
-    "promoPrice": 3.58,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:03"
-  },
-  {
-    "externalId": "fop-wrapper:06b40762-7903-4863-8a4f-9f36399132d7",
-    "name": "Ser Mozzarella Jager 125 g",
-    "promoDetails": "39% taniej",
-    "priceUnit": "0.125kg (27,92 zł/kg)",
-    "oldPrice": "5,68 zł - cena przed obniżką",
-    "promoPrice": 3.49,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:04"
-  },
-  {
-    "externalId": "fop-wrapper:9fd58cc0-c6cc-4c5a-a454-c87b9cd897bd",
-    "name": "Twój Smak serek śmietankowy naturalny Piątnica 135 g",
-    "promoDetails": "2 za 6,00 zł",
-    "priceUnit": "0.135kg (31,70 zł/kg)",
+    "externalId": "fop-wrapper:4b0eb709-2390-4e6d-a6ad-3927b85daebd",
+    "name": "Tortilla pszenna Auchan 240 g",
+    "promoDetails": "2 za 6,98 zł",
+    "priceUnit": "0.24kg (16,63 zł/kg)",
     "oldPrice": "-",
-    "promoPrice": 4.28,
+    "promoPrice": 3.99,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:04"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:60e88200-85a9-4576-ad4a-6af0e6fcc204",
-    "name": "Tofu naturalne Auchan 180 g",
-    "promoDetails": "10% taniej",
-    "priceUnit": "0.18kg (24,94 zł/kg)",
-    "oldPrice": "4,98 zł - cena przed obniżką",
-    "promoPrice": 4.49,
-    "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:04"
-  },
-  {
-    "externalId": "fop-wrapper:a433ef37-b02c-4f57-8038-811b2c06760a",
-    "name": "Ryż Basmati Auchan 500 g",
+    "externalId": "fop-wrapper:63b5a93b-8aec-4b91-ae30-c35d79012af4",
+    "name": "Sok 100% jabłko Tymbark 1 l",
     "promoDetails": "2 za 8,98 zł",
-    "priceUnit": "0.5kg (12,38 zł/kg)",
+    "priceUnit": "1L (4,94 zł/l)",
     "oldPrice": "-",
-    "promoPrice": 6.19,
+    "promoPrice": 4.94,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:04"
+    "scrapedAt": "5.05.2026, 18:19:47"
   },
   {
-    "externalId": "fop-wrapper:cbaa5b8c-7052-47cc-9980-bd7fb28c07a9",
-    "name": "Twaróg półtłusty bez laktozy klinek Mlekovita 230 g",
-    "promoDetails": "29% taniej",
-    "priceUnit": "0.23kg (18,48 zł/kg)",
-    "oldPrice": "5,98 zł - cena przed obniżką",
+    "externalId": "fop-wrapper:a0c484de-c716-4b22-9c7f-ab00a0e5fbdf",
+    "name": "Jogurt naturalny typ grecki Mlekovita 400 g",
+    "promoDetails": "37% taniej",
+    "priceUnit": "0.4kg (7,50 zł/kg)",
+    "oldPrice": "4,74 zł - cena przed obniżką",
+    "promoPrice": 3,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:49"
+  },
+  {
+    "externalId": "fop-wrapper:0d4cc6a6-644b-4234-999c-bff622b7ba89",
+    "name": "Koncentrat pomidorowy Dawtona 190 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.19kg (15,68 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 2.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:49"
+  },
+  {
+    "externalId": "fop-wrapper:4353167e-b217-48a3-b1ca-953162d37589",
+    "name": "Ręcznik kuchenny 300 listków Mega Jumbo Foxy 1 rolka",
+    "promoDetails": "44% taniej",
+    "priceUnit": "(8,99 zł/szt.)",
+    "oldPrice": "16,18 zł - najniższa cena",
+    "promoPrice": 8.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:49"
+  },
+  {
+    "externalId": "fop-wrapper:c707a8e6-8ef8-42b8-9c36-cfbbd11b0b85",
+    "name": "Pomidor malinowy Pewni Dobrego 600 g",
+    "promoDetails": "44% taniej",
+    "priceUnit": "0.6kg (14,98 zł/kg)",
+    "oldPrice": "15,99 zł - cena przed obniżką",
+    "promoPrice": 8.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:49"
+  },
+  {
+    "externalId": "fop-wrapper:8973ffcf-de7a-452b-af8e-e80f060b2ec0",
+    "name": "Barista Napój owsiany Alpro 750 ml",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.75L (13,31 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:49"
+  },
+  {
+    "externalId": "fop-wrapper:7866c30c-0b4e-402b-a90c-f292bca0ef6b",
+    "name": "Chleb tostowy pszenny pełnoziarnisty krojony Auchan 500 g",
+    "promoDetails": "2 za 5,72 zł",
+    "priceUnit": "0.5kg (6,36 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 3.18,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:51"
+  },
+  {
+    "externalId": "fop-wrapper:bb7c388c-4a2b-49a2-a0ae-616092ae97dc",
+    "name": "Twój Smak serek naturalny Piątnica 200 g",
+    "promoDetails": "9% taniej",
+    "priceUnit": "0.2kg (29,45 zł/kg)",
+    "oldPrice": "6,44 zł - cena przed obniżką",
+    "promoPrice": 5.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:51"
+  },
+  {
+    "externalId": "fop-wrapper:9630f2a5-ec2a-4d5f-acdc-93353e9cb703",
+    "name": "Papier Xero A4 MMnexo biały 80g MMnexo Everyday 1 sztuka",
+    "promoDetails": "32% taniej",
+    "priceUnit": "(11,49 zł/szt.)",
+    "oldPrice": "16,95 zł - najniższa cena",
+    "promoPrice": 11.49,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:51"
+  },
+  {
+    "externalId": "fop-wrapper:c31592fb-1595-4b15-8b4c-baa61f7df9e3",
+    "name": "Mięso mielone z łopatki wieprzowej MAP Auchan 500 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.5kg (25,38 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 12.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:51"
+  },
+  {
+    "externalId": "fop-wrapper:2a00abba-5664-4973-82b7-19a2eae04108",
+    "name": "Boczek w słupkach Auchan 130 g",
+    "promoDetails": "17% taniej",
+    "priceUnit": "0.13kg (38,38 zł/kg)",
+    "oldPrice": "5,99 zł - cena przed obniżką",
+    "promoPrice": 4.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:51"
+  },
+  {
+    "externalId": "fop-wrapper:17365dcb-b439-4a03-b521-f5f14b25dd43",
+    "name": "Mleko Polskie 3.2% Mlekovita 1 l",
+    "promoDetails": "5% taniej",
+    "priceUnit": "1L (4,16 zł/l)",
+    "oldPrice": "4,37 zł - cena przed obniżką",
+    "promoPrice": 4.16,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:53"
+  },
+  {
+    "externalId": "fop-wrapper:30fb6ed6-4565-40c6-9471-b88e95bb76dd",
+    "name": "Borówka Amerykańska Owoce Auchan 250 g",
+    "promoDetails": "39% taniej",
+    "priceUnit": "0.25kg (55,96 zł/kg)",
+    "oldPrice": "22,99 zł - cena przed obniżką",
+    "promoPrice": 13.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:53"
+  },
+  {
+    "externalId": "fop-wrapper:ed80b817-386b-4d30-ac69-3ae0957b76d6",
+    "name": "Włoszczyzna XXL Warzywa Auchan 1 sztuka",
+    "promoDetails": "27% taniej",
+    "priceUnit": "(7,99 zł/szt.)",
+    "oldPrice": "10,99 zł - cena przed obniżką",
+    "promoPrice": 7.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:53"
+  },
+  {
+    "externalId": "fop-wrapper:2206ea3d-6cb0-45aa-9ee0-714d296e56ae",
+    "name": "Kukurydza konserwowa Bonduelle 170 g",
+    "promoDetails": "3 za 10,47 zł",
+    "priceUnit": "0.14kg (39,14 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.48,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:53"
+  },
+  {
+    "externalId": "fop-wrapper:9f5be297-a133-4e10-afb5-43ef5803e0f2",
+    "name": "Naturalna woda mineralna niegazowana Jurajska 6 x 1,5 l",
+    "promoDetails": "20% taniej",
+    "priceUnit": "6 x 1.5L (1,19 zł/l)",
+    "oldPrice": "13,44 zł - najniższa cena",
+    "promoPrice": 10.69,
+    "depositPrice": "+kaucja 3,00 zł",
+    "scrapedAt": "5.05.2026, 18:19:53"
+  },
+  {
+    "externalId": "fop-wrapper:85464226-64b3-49a4-a29e-64ab2b8cd4ab",
+    "name": "Makaron Spagetti Lubella 400 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.4kg (12,20 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 4.88,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:da389c3e-d09b-4d77-b4b4-bfa06f6af344",
+    "name": "Rożek o smaku słonego karmelu Auchan 110 ml",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.11L (18,18 zł/l)",
+    "oldPrice": "2,49 zł - cena przed obniżką",
+    "promoPrice": 2,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:f4b3760e-a9e1-4f3f-a0a3-78ba9ca4bcdb",
+    "name": "Śmietana 18% ekstra kremowa Zott 180 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.18kg (20,50 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 3.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:865b0003-6bee-4afd-95bb-c1e36d5c7767",
+    "name": "Frytki cienkie do piekarnika - bezglutenowe Proste Historie 750 g",
+    "promoDetails": "32% taniej",
+    "priceUnit": "0.75kg (9,99 zł/kg)",
+    "oldPrice": "10,98 zł - cena przed obniżką",
+    "promoPrice": 7.49,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:161f23be-fe72-4ccf-96d3-597a5f5b063a",
+    "name": "Jabłka Owoce Auchan na wagę ok. 500 g",
+    "promoDetails": "5% taniej",
+    "priceUnit": "0.5kg ~ porcja (3,49 zł/kg)",
+    "oldPrice": "1,84 zł - cena przed obniżką",
+    "promoPrice": 1.75,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:2c7200e1-3561-4345-8533-6462cf28e8ed",
+    "name": "Mięso mielone z szynki MAP Auchan 500 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.5kg (27,98 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 13.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:bcfcfb87-0c8d-4efd-8843-9b3e831457d8",
+    "name": "Barista Napój kokosowy Alpro 750 ml",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.75L (13,31 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:940a3a34-515d-4088-a615-3537b5456f6a",
+    "name": "Kefir naturalny 1.5% Pewni Dobrego 250 g",
+    "promoDetails": "11% taniej",
+    "priceUnit": "0.25kg (6,60 zł/kg)",
+    "oldPrice": "1,85 zł - cena przed obniżką",
+    "promoPrice": 1.65,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:3cef6f1c-0098-4b56-bb43-d8769058b255",
+    "name": "Chusteczki higieniczne mega poręczne Foxy 10 sztuk",
+    "promoDetails": "40% taniej",
+    "priceUnit": "90 na paczkę (0,03 zł/szt.)",
+    "oldPrice": "4,99 zł - najniższa cena",
+    "promoPrice": 3,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:85298e5d-cbd4-41c7-be98-53a65bbee285",
+    "name": "Napój gazowany Zero Sugar o smaku cytrynowo-limonkowym Sprite 1,5 l",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "1.5L (6,65 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:19:55"
+  },
+  {
+    "externalId": "fop-wrapper:57cccb56-a924-4d55-81e9-d254d4aff9ab",
+    "name": "Awokado siatka kaliber 24-30 Owoce Auchan 700 g",
+    "promoDetails": "44% taniej",
+    "priceUnit": "0.7kg (12,84 zł/kg)",
+    "oldPrice": "15,99 zł - cena przed obniżką",
+    "promoPrice": 8.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:68323f3c-4d50-4d09-bceb-7b50f177d2cc",
+    "name": "Makaron świderki Lubella 400 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.4kg (12,95 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.18,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:87dd2c7b-0833-49eb-824e-e0ae97268e00",
+    "name": "Napój gazowany o smaku cytryny i limonki Sprite 1,5 l",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "1.5L (6,65 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:d6d48091-6972-4f82-b39c-71909d9a0ec9",
+    "name": "Danio Serek multipack waniliowy Danone 4 x 130 g",
+    "promoDetails": "26% taniej",
+    "priceUnit": "0.52kg (12,79 zł/kg)",
+    "oldPrice": "8,98 zł - cena przed obniżką",
+    "promoPrice": 6.65,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:de7c7f0e-5a4f-49c4-b1f4-ca7575c53416",
+    "name": "Jogurt kremowy z malinami i granolą Bakoma 230 g",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.23kg (21,09 zł/kg)",
+    "oldPrice": "6,08 zł - cena przed obniżką",
+    "promoPrice": 4.85,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:698e2db9-1648-461f-a8bf-24c0f0964859",
+    "name": "Ser Halloumi Auchan Collection 225 g",
+    "promoDetails": "17% taniej",
+    "priceUnit": "0.225kg (44,40 zł/kg)",
+    "oldPrice": "11,99 zł - cena przed obniżką",
+    "promoPrice": 9.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:93f3269e-874d-4d9c-85ff-2cbe54da120f",
+    "name": "Napój gazowany Orange zero sugar o smaku pomarańczowym Fanta 1,5 l",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "1.5L (5,99 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 8.98,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:ed7efb16-80bc-4a54-ae2c-52144f97682b",
+    "name": "Ser mascarpone śmietankowo-kremowy Piątnica 250 g",
+    "promoDetails": "15% taniej",
+    "priceUnit": "0.25kg (35,96 zł/kg)",
+    "oldPrice": "10,58 zł - cena przed obniżką",
+    "promoPrice": 8.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:35168375-3447-4451-8287-9dc24210a115",
+    "name": "Rożek o smaku malinowym Auchan 110 ml",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.11L (18,18 zł/l)",
+    "oldPrice": "2,49 zł - cena przed obniżką",
+    "promoPrice": 2,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:5058d254-f426-42cd-9cec-dfbaefe3007e",
+    "name": "Makaron nitki cięte Lubella 400 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.4kg (12,95 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.18,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:01"
+  },
+  {
+    "externalId": "fop-wrapper:ae0d07e4-3a04-4941-97a8-44f927172b1a",
+    "name": "Mięso mielone z fileta kurczaka Auchan 400 g",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.4kg (29,98 zł/kg)",
+    "oldPrice": "14,99 zł - cena przed obniżką",
+    "promoPrice": 11.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:03"
+  },
+  {
+    "externalId": "fop-wrapper:f33bd519-2e5a-45e3-81d3-ac1b52946f0a",
+    "name": "Mąka z kłoskiem luksusowa typ 550 Gdańskie Młyny 1 kg",
+    "promoDetails": "39% taniej",
+    "priceUnit": "1kg (2,45 zł/kg)",
+    "oldPrice": "3,99 zł - najniższa cena",
+    "promoPrice": 2.45,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:03"
+  },
+  {
+    "externalId": "fop-wrapper:887e3390-e6eb-44fe-af1a-71d76a67b37e",
+    "name": "Łosoś wędzony Auchan Collection 100 g",
+    "promoDetails": "13% taniej",
+    "priceUnit": "0.1kg (139,90 zł/kg)",
+    "oldPrice": "15,99 zł - cena przed obniżką",
+    "promoPrice": 13.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:03"
+  },
+  {
+    "externalId": "fop-wrapper:e2756be6-0895-425a-b5bf-05960807db5d",
+    "name": "Sos spaghetti Łowicz 500 g",
+    "promoDetails": "Drugi 40% taniej",
+    "priceUnit": "0.5kg (14,56 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 7.28,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:03"
+  },
+  {
+    "externalId": "fop-wrapper:b25a416a-d6d0-4980-9405-49548a51a195",
+    "name": "Zsiadłe mleko Krasnystaw 400 g",
+    "promoDetails": "17% taniej",
+    "priceUnit": "0.4kg (7,38 zł/kg)",
+    "oldPrice": "3,54 zł - cena przed obniżką",
+    "promoPrice": 2.95,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:03"
+  },
+  {
+    "externalId": "fop-wrapper:e3a783d6-6ea5-4aa8-a970-49bbedb154de",
+    "name": "Pasta do zębów wybielająca Colgate 75 ml",
+    "promoDetails": "Drugi za 1 zł",
+    "priceUnit": "0.075L (8,92 zł za 100 ml)",
+    "oldPrice": "-",
+    "promoPrice": 6.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:a689c640-4786-4d22-8352-b10e389bec1a",
+    "name": "Naturalna woda mineralna gazowana Jurajska 6 x 1,5 l",
+    "promoDetails": "20% taniej",
+    "priceUnit": "6 x 1.5L (1,19 zł/l)",
+    "oldPrice": "13,44 zł - najniższa cena",
+    "promoPrice": 10.69,
+    "depositPrice": "+kaucja 3,00 zł",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:4ccd37b8-aba4-43ba-9882-2e64d7d4697b",
+    "name": "Papier do pieczenia 8 m Auchan sztuka",
+    "promoDetails": "20% taniej",
+    "priceUnit": "(3,99 zł/szt.)",
+    "oldPrice": "4,99 zł - najniższa cena",
+    "promoPrice": 3.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:1994a8ed-f6de-4533-a0a9-b14e2eb02a98",
+    "name": "Papier do pieczenia 16 arkuszy Auchan 1 sztuka",
+    "promoDetails": "20% taniej",
+    "priceUnit": "(3,99 zł/szt.)",
+    "oldPrice": "4,99 zł - najniższa cena",
+    "promoPrice": 3.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:0902d14c-f5d8-47ea-9afa-bafe4a0ba1c7",
+    "name": "Czerwona fasola Bonduelle 212 g",
+    "promoDetails": "3 za 10,47 zł",
+    "priceUnit": "0.125kg (46,32 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.79,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:be3f4856-8c30-4b47-a631-2b038d407a95",
+    "name": "Czekolada biała Auchan 100 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.1kg (56,90 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:583ce40d-fee1-4632-a19a-6d623f996ddd",
+    "name": "Mięso mielone wieprzowe Auchan 400 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.4kg (19,25 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 7.7,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:aa9f4c81-3bd1-4d6d-8d0a-2bbaf6cabf9e",
+    "name": "Karma mokra dla kotów z cielęciną w jasnym sosie Sheba 85 g",
+    "promoDetails": "46% taniej",
+    "priceUnit": "0.085kg (23,53 zł/kg)",
+    "oldPrice": "3,68 zł - najniższa cena",
+    "promoPrice": 2,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:e743dc7d-cdc8-45a0-ada5-2757f40f6236",
+    "name": "Bułka burgerowa pszenna Inter Europol 130 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.13kg (20,69 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 2.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:8f4daf27-7be1-4ef4-a49b-921cecca7441",
+    "name": "Sos boloński Łowicz 500 g",
+    "promoDetails": "Drugi 40% taniej",
+    "priceUnit": "0.5kg (13,96 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 6.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:13"
+  },
+  {
+    "externalId": "fop-wrapper:12f6f202-7561-4e38-95fc-f1759798ba2f",
+    "name": "Ser Królewski light Sierpc 150 g",
+    "promoDetails": "31% taniej",
+    "priceUnit": "0.15kg (39,93 zł/kg)",
+    "oldPrice": "8,74 zł - cena przed obniżką",
+    "promoPrice": 5.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:16"
+  },
+  {
+    "externalId": "fop-wrapper:83bf7baf-09c0-4f2c-ba50-617d5fe8b87f",
+    "name": "Czekolada mleczna Auchan 100 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.1kg (56,90 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:16"
+  },
+  {
+    "externalId": "fop-wrapper:b70cbfd2-7361-4811-8f18-a657fb309b05",
+    "name": "Jogurt kremowy z wiśnią. czereśnią i granolą Bakoma 230 g",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.23kg (21,09 zł/kg)",
+    "oldPrice": "6,08 zł - cena przed obniżką",
+    "promoPrice": 4.85,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:16"
+  },
+  {
+    "externalId": "fop-wrapper:c6fa5c4c-9a4d-4f19-a30b-2327734a6ff3",
+    "name": "Jogurt pitny stracciatella Milko 330 ml",
+    "promoDetails": "14% taniej",
+    "priceUnit": "0.33L (9,85 zł/l)",
+    "oldPrice": "3,78 zł - cena przed obniżką",
+    "promoPrice": 3.25,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:16"
+  },
+  {
+    "externalId": "fop-wrapper:84b4adb4-d57a-4775-ac64-7e27137c3baa",
+    "name": "Sos słodko - kwaśny Łowicz 500 g",
+    "promoDetails": "Drugi 40% taniej",
+    "priceUnit": "0.5kg (13,96 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 6.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:16"
+  },
+  {
+    "externalId": "fop-wrapper:4a6f718a-fb95-402c-af00-f103fa0a94a8",
+    "name": "Jogurt pitny truskawkowy Milko 330 ml",
+    "promoDetails": "14% taniej",
+    "priceUnit": "0.33L (9,85 zł/l)",
+    "oldPrice": "3,78 zł - cena przed obniżką",
+    "promoPrice": 3.25,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:17"
+  },
+  {
+    "externalId": "fop-wrapper:4d094d58-433d-45a3-8282-019a5ea5465c",
+    "name": "Pasta do zębów MaxWhite Sparkle Diamonds Colgate 75 ml",
+    "promoDetails": "Drugi za 1 zł",
+    "priceUnit": "0.075L (79,87 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 5.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:17"
+  },
+  {
+    "externalId": "fop-wrapper:d04831b3-6b7c-46f7-83a7-ad1b426aec4a",
+    "name": "Frytki karbowane do piekarnika - bezglutenowe Proste Historie 750 g",
+    "promoDetails": "32% taniej",
+    "priceUnit": "0.75kg (9,99 zł/kg)",
+    "oldPrice": "10,98 zł - cena przed obniżką",
+    "promoPrice": 7.49,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:17"
+  },
+  {
+    "externalId": "fop-wrapper:c05f2949-801b-4cc2-9df2-614751d01191",
+    "name": "Naturalna woda mineralna lekko gazowana Jurajska 1,5 l",
+    "promoDetails": "20% taniej",
+    "priceUnit": "6 x 1.5L (1,19 zł/l)",
+    "oldPrice": "13,44 zł - najniższa cena",
+    "promoPrice": 10.69,
+    "depositPrice": "+kaucja 3,00 zł",
+    "scrapedAt": "5.05.2026, 18:20:17"
+  },
+  {
+    "externalId": "fop-wrapper:3b1a33ff-7131-4237-b7bb-ba6b7f8764b2",
+    "name": "Maczugi o smaku ketchup Star 80 g",
+    "promoDetails": "30% taniej",
+    "priceUnit": "0.08kg (37,50 zł/kg)",
+    "oldPrice": "4,28 zł - najniższa cena",
+    "promoPrice": 3,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:17"
+  },
+  {
+    "externalId": "fop-wrapper:18c7cfdf-1622-4e6e-88d5-2c7ed43c9848",
+    "name": "Jogurt kremowy z brzoskwiniami i granolą Bakoma 230 g",
+    "promoDetails": "20% taniej",
+    "priceUnit": "0.23kg (21,09 zł/kg)",
+    "oldPrice": "6,08 zł - cena przed obniżką",
+    "promoPrice": 4.85,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:42cf0022-06a3-44c6-a718-685a6e1bb3c0",
+    "name": "Ciastka zbożowe kakao czekolada belVita 300 g",
+    "promoDetails": "13% taniej",
+    "priceUnit": "0.3kg (26,30 zł/kg)",
+    "oldPrice": "9,04 zł - najniższa cena",
+    "promoPrice": 7.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:7c30d289-866e-46e1-bd4c-7205b1368453",
+    "name": "Karma mokra dla kotów pasztet z łososia Sheba 85 g",
+    "promoDetails": "46% taniej",
+    "priceUnit": "0.085kg (23,53 zł/kg)",
+    "oldPrice": "3,68 zł - najniższa cena",
+    "promoPrice": 2,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:bfc7f0dd-b6a1-4803-89d4-6cfddebc48fe",
+    "name": "Piwo bezalkoholowe Lemon alk. 0,0% obj. Desperados 400 ml",
+    "promoDetails": "3+1 za grosz",
+    "priceUnit": "0.4L (14,48 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 5.79,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:7ed3a332-1f3a-487e-bfd5-51873788eba8",
+    "name": "Jogurt pitny z maliną i granatem Milko 330 ml",
+    "promoDetails": "14% taniej",
+    "priceUnit": "0.33L (9,85 zł/l)",
+    "oldPrice": "3,78 zł - cena przed obniżką",
+    "promoPrice": 3.25,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:4dc55eae-7632-4c78-b605-ec678b7c6ce6",
+    "name": "Indyk maślany Wielkopolski Indyk 200 g",
+    "promoDetails": "27% taniej",
+    "priceUnit": "0.2kg (39,95 zł/kg)",
+    "oldPrice": "10,99 zł - cena przed obniżką",
+    "promoPrice": 7.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:007c70dc-240a-4034-a0a9-11d85e2d5824",
+    "name": "Makaron pióra Lubella 400 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.4kg (12,95 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.18,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:d4f0c0d5-fc16-4bd7-a35a-ba2f5139d537",
+    "name": "Chipsy karbowane solone Auchan 250 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.25kg (35,56 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 8.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:799f221d-d6d2-4367-98fa-45cbfea67f8e",
+    "name": "Barista Napój migdałowy Alpro 750 ml",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.75L (13,31 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:8a64834d-62cd-402c-95eb-36f0984dece3",
+    "name": "Mydło w kostce z naturalnym ekstraktem z oliwek Palmolive 90 g",
+    "promoDetails": "Drugi za 1 zł",
+    "priceUnit": "0.09kg (3,31 zł za 100 g)",
+    "oldPrice": "-",
+    "promoPrice": 2.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:31"
+  },
+  {
+    "externalId": "fop-wrapper:ca7db33b-b28c-4b89-b4cb-9f9432bd3d87",
+    "name": "Żeberka wieprzowe paski Auchan na wagę ok. 600 g",
+    "promoDetails": "17% taniej",
+    "priceUnit": "0.6kg ~ porcja (19,89 zł/kg)",
+    "oldPrice": "14,39 zł - cena przed obniżką",
+    "promoPrice": 11.93,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:33"
+  },
+  {
+    "externalId": "fop-wrapper:b9f3fb72-5c8d-4775-b792-0ce15eeef9b9",
+    "name": "Barista Napój roślinny Caramel Alpro 750 ml",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.75L (13,31 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:33"
+  },
+  {
+    "externalId": "fop-wrapper:772c1958-598d-4307-81ae-a2d9da90edc2",
+    "name": "Biała fasola Cannellini Bonduelle 175 g",
+    "promoDetails": "3 za 10,47 zł",
+    "priceUnit": "0.125kg (43,84 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 5.48,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:33"
+  },
+  {
+    "externalId": "fop-wrapper:5d221205-9907-4957-8160-dd020d8d29b2",
+    "name": "Vegan Cocoghurt kremowy Auchan 150 g",
+    "promoDetails": "22% taniej",
+    "priceUnit": "0.15kg (19,67 zł/kg)",
+    "oldPrice": "3,79 zł - cena przed obniżką",
+    "promoPrice": 2.95,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:33"
+  },
+  {
+    "externalId": "fop-wrapper:45fd66c0-583a-42e7-be4a-bcc3b197ccdb",
+    "name": "Zupa kalafiorowa z koperkiem Hortex 450 g",
+    "promoDetails": "24% taniej",
+    "priceUnit": "0.45kg (13,31 zł/kg)",
+    "oldPrice": "7,88 zł - cena przed obniżką",
+    "promoPrice": 5.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:33"
+  },
+  {
+    "externalId": "fop-wrapper:447ff8d9-e120-494d-8450-f756fc40ddee",
+    "name": "Ciastka kakaowe z nadzieniem o smaku waniliowym Original Oreo 154 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.154kg (44,74 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 6.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:35"
+  },
+  {
+    "externalId": "fop-wrapper:29907fc6-1a08-4775-be97-bcd809ae3a1d",
+    "name": "Ser typu śródziemnomorskiego w zalewie olejowej z suszonymi pomidorami Apetina 100 g",
+    "promoDetails": "2 za 9,00 zł",
+    "priceUnit": "0.1kg (68,40 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 6.84,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:35"
+  },
+  {
+    "externalId": "fop-wrapper:e9ca1413-21b7-4332-be67-d63208e74a34",
+    "name": "Ser grillowo-sałatkowy Auchan 200 g",
+    "promoDetails": "13% taniej",
+    "priceUnit": "0.2kg (38,95 zł/kg)",
+    "oldPrice": "8,99 zł - cena przed obniżką",
+    "promoPrice": 7.79,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:35"
+  },
+  {
+    "externalId": "fop-wrapper:fab3d1e6-faf2-4155-a232-8dba5b48fde6",
+    "name": "Danio extra czekolada Danone 4 x 130 g",
+    "promoDetails": "26% taniej",
+    "priceUnit": "0.56kg (11,88 zł/kg)",
+    "oldPrice": "8,98 zł - cena przed obniżką",
+    "promoPrice": 6.65,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:35"
+  },
+  {
+    "externalId": "fop-wrapper:f95081f1-6194-480f-8328-603ae4c4a8de",
+    "name": "Chipsy karbowane o smaku papryki Auchan 250 g",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.25kg (35,56 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 8.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:35"
+  },
+  {
+    "externalId": "fop-wrapper:e6d94fad-2304-4229-bd7a-2ed615604a21",
+    "name": "Barista Napój owsiano-sojowy o smaku waniliowym Alpro 750 ml",
+    "promoDetails": "2+1 za grosz",
+    "priceUnit": "0.75L (13,31 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 9.98,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:37"
+  },
+  {
+    "externalId": "fop-wrapper:279412ab-917e-4da4-8881-2b9e47b26c62",
+    "name": "Pasta do zębów MaxFresh Cooling Crystal Colgate 75 ml",
+    "promoDetails": "Drugi za 1 zł",
+    "priceUnit": "0.075L (85,07 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 6.38,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:37"
+  },
+  {
+    "externalId": "fop-wrapper:12cf3029-3a0e-4004-89fb-667cdd37667f",
+    "name": "Pasta do zębów MaxWhite White Crystals Colgate 75 ml",
+    "promoDetails": "Drugi za 1 zł",
+    "priceUnit": "0.075L (79,87 zł/l)",
+    "oldPrice": "-",
+    "promoPrice": 5.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:37"
+  },
+  {
+    "externalId": "fop-wrapper:be8cff41-48bb-442b-a43a-e6083c940ed5",
+    "name": "Mullermilch Protein o smaku czekoladowo - bananowym Müller 400 g",
+    "promoDetails": "18% taniej",
+    "priceUnit": "0.4kg (10,63 zł/kg)",
+    "oldPrice": "5,18 zł - cena przed obniżką",
     "promoPrice": 4.25,
     "depositPrice": "-",
-    "scrapedAt": "18.04.2026, 21:06:04"
+    "scrapedAt": "5.05.2026, 18:20:37"
+  },
+  {
+    "externalId": "fop-wrapper:509354f8-b35c-4b17-9765-4aaadac32be0",
+    "name": "Zupa botwinka Hortex 450g",
+    "promoDetails": "24% taniej",
+    "priceUnit": "0.45kg (13,31 zł/kg)",
+    "oldPrice": "7,88 zł - cena przed obniżką",
+    "promoPrice": 5.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:37"
+  },
+  {
+    "externalId": "fop-wrapper:3c3a7569-fb18-4466-96f6-84b8f79ce825",
+    "name": "Primo śmietana 12% Zott 180 g",
+    "promoDetails": "1+1 za grosz",
+    "priceUnit": "0.18kg (20,50 zł/kg)",
+    "oldPrice": "-",
+    "promoPrice": 3.69,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:39"
+  },
+  {
+    "externalId": "fop-wrapper:60e73058-61a7-46e4-bfd5-3ddb3e6d61f9",
+    "name": "Nektar z czerwonego grejpfruta Auchan 1 l",
+    "promoDetails": "14% taniej",
+    "priceUnit": "1L (3,00 zł/l)",
+    "oldPrice": "3,48 zł - najniższa cena",
+    "promoPrice": 3,
+    "depositPrice": "+kaucja 0,50 zł",
+    "scrapedAt": "5.05.2026, 18:20:39"
+  },
+  {
+    "externalId": "fop-wrapper:b706baba-e110-4ff4-af3a-e711a7329822",
+    "name": "Magic Sticks owocowe gumy rozpuszczalne Mamba 140 g",
+    "promoDetails": "22% taniej",
+    "priceUnit": "0.14kg (34,93 zł/kg)",
+    "oldPrice": "6,24 zł - najniższa cena",
+    "promoPrice": 4.89,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:39"
+  },
+  {
+    "externalId": "fop-wrapper:92020ab2-074e-47fb-9764-c35e4ad6914d",
+    "name": "Active mix sałat z rukolą Fit 150 g",
+    "promoDetails": "27% taniej",
+    "priceUnit": "0.15kg (33,27 zł/kg)",
+    "oldPrice": "6,79 zł - cena przed obniżką",
+    "promoPrice": 4.99,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:39"
+  },
+  {
+    "externalId": "fop-wrapper:bbdb50c5-fd3e-4468-9ddb-a9e19499a7af",
+    "name": "Mąka z kłoskiem wrocławska typ 500 Gdańskie Młyny 1 kg",
+    "promoDetails": "39% taniej",
+    "priceUnit": "1kg (2,45 zł/kg)",
+    "oldPrice": "3,99 zł - najniższa cena",
+    "promoPrice": 2.45,
+    "depositPrice": "-",
+    "scrapedAt": "5.05.2026, 18:20:39"
   }
 ]
