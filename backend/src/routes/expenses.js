@@ -41,6 +41,34 @@ router.get("/", auth, async (req, res) => {
     }
 });
 
+router.get("/monthly-sum", auth, async (req, res) => {
+    try {
+        const now = new Date();
+        const startOfMonth = new Date(now.getFullYear(), now.getMonth(), 1);
+        const endOfMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59);
+
+        const expenses = await prisma.expense.findMany({
+            where: {
+                userId: req.user.id,
+                date: {
+                    gte: startOfMonth,
+                    lte: endOfMonth
+                }
+            }
+        });
+
+        const total = expenses.reduce((sum, expense) => {
+            return sum + (Number(expense.totalAmount) || 0);
+
+        }, 0);
+
+        res.json({ total: total.toFixed(2) });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: "Błąd podczas sumowania wydatków." });
+    }
+});
+
 router.post("/", auth, async (req, res) => {
     try {
 

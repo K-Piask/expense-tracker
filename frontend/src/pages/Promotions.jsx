@@ -75,10 +75,10 @@ export default function Promotions() {
                 <section className="neo-section flex flex-col gap-5 h-[70vh] w-full">
                     <label className="neo-label text-3xl text-center tracking-tight">Wyszukiwarka Promocji</label>
                     <div className="h-1 w-full bg-black shrink-0"></div>
-                    <form onSubmit={handlePromotions} className="flex w-full gap-2 shrink-0">
+                    <form onSubmit={handlePromotions} className="flex w-full gap-4 shrink-0">
                         <input
                             type="text"
-                            className="neo-input w-3/4"
+                            className="neo-input w-3/4 text-lg"
                             placeholder="Co chcesz wyszukać?"
                             value={searchedProduct}
                             onChange={(e) => {
@@ -87,7 +87,7 @@ export default function Promotions() {
                             }
                             }
                         ></input>
-                        <button type="submit" className="neo-btn w-1/4 mb-1 py-0 text-xl hover:bg-yellow-300" disabled={isLoading} >{isLoading ? "Szukam..." : "Wyszukaj"}</button>
+                        <button type="submit" className="neo-btn rounded-xl w-1/4 py-3 text-xl hover:bg-yellow-300 hover:-translate-y-1 shadow-[0px_0px_0px_0px_#000] hover:shadow-[4px_4px_0px_0px_#000] transition-all active:translate-y-0 active:shadow-none" disabled={isLoading} >{isLoading ? "Szukam..." : "Wyszukaj"}</button>
                     </form>
                     <div className="flex flex-col w-full h-3/4 p-5 border-4 border-black rounded-xl bg-gray-200 min-h-0">
                         <div className="grid grid-cols-4 content-start gap-4 w-full h-full overflow-y-auto pr-2 pb-2 custom-scrollbar">
@@ -105,7 +105,7 @@ export default function Promotions() {
 
                             {!isLoading && !hasSearched && promotions.length === 0 && (
                                 <div className="col-span-4 text-center text-2xl font-black mt-10">
-                                    Tutaj pojawią się promocję. Wyszukaj coś!
+                                    Tutaj pojawią się promocje. Wyszukaj coś!
                                 </div>
                             )}
 
@@ -172,7 +172,7 @@ export default function Promotions() {
                 </section>
                 <div className="flex justify-center gap-4">
 
-                    <button type="button" onClick={() => navigate("/dashboard")} className="bg-yellow-100 neo-btn py-2 hover:bg-yellow-200 w-1/2">&#128281; Powrót na Stronę Główną</button>
+                    <button type="button" onClick={() => navigate("/home")} className="bg-yellow-100 neo-btn text-lg py-2 hover:bg-yellow-200 w-1/2">&#10094; Powrót</button>
                 </div>
 
             </div >

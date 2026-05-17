@@ -27,7 +27,7 @@ export default function Login() {
             }
             const data = await res.json();
             localStorage.setItem("token", data.token)
-            navigate("/dashboard");
+            navigate("/home");
         } catch (err) {
             setError(err.message);
         } finally {

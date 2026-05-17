@@ -9,7 +9,6 @@ body,
   padding: 0;
 }
 
-/* Możesz zostawić te ustawienia dla ładniejszych czcionek */
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +17,21 @@ body,
 
 @layer components {
 
+  .neo-background {
+    @apply flex flex-col items-center justify-start min-h-screen w-full bg-linear-to-br from-slate-500 via-slate-700 to-slate-900 p-4 md:p-10;
+  }
+
+  .neo-logo {
+    @apply cursor-pointer relative z-10 mx-auto table text-center text-5xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 mb-4 before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl;
+  }
+
+  .neo-checkbox {
+    @apply w-8 h-8 shrink-0 border-4 border-black bg-white flex items-center justify-center hover:bg-yellow-200 transition-colors shadow-[2px_2px_0px_0px_#000] active:shadow-none active:translate-y-0.5;
+  }
+
+  .neo-error {
+    @apply bg-red-400 border-4 border-black p-4 rounded-2xl font-black text-black shadow-[4px_4px_0px_0px_#000] flex justify-between;
+  }
 
   .neo-section {
     @apply w-full border-4 bg-white border-black rounded-3xl p-6 shadow-[8px_8px_0px_0px_#000];
@@ -25,7 +39,7 @@ body,
 
 
   .neo-btn {
-    @apply border-4 border-black rounded-2xl px-6 py-2 bg-yellow-400 font-black uppercase italic shadow-[4px_4px_0px_0px_#000] transition-all active:shadow-none active:translate-x-0.5 active:translate-y-0.5;
+    @apply border-4 border-black rounded-2xl px-6 py-2 bg-yellow-400 font-black uppercase shadow-[4px_4px_0px_0px_#000] transition-all active:shadow-none active:translate-x-1 active:translate-y-1;
   }
 
 

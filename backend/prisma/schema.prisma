@@ -86,6 +86,7 @@ model Promotion {
 model ShoppingListItem {
   id              Int     @id @default(autoincrement())
   name            String
+  isBought        Boolean @default(false)
 
   shoppingListId  Int
   shoppingList    ShoppingList  @relation(fields: [shoppingListId], references: [id], onDelete: Cascade)

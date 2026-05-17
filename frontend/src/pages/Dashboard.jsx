@@ -136,8 +136,8 @@ export default function Dashboard() {
 
         <div className="flex flex-col items-center justify-center min-h-screen w-full bg-linear-to-br from-slate-500 via-slate-700 to-slate-900 p-4 md:p-10">
             <div className="w-full max-w-4xl flex flex-col gap-8">
-                <div className="relative py-4">
-                    <h1 className=" relative z-10 mx-auto table text-center text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 
+                <div className="relative py-4" >
+                    <h1 onClick={() => navigate('/home')} className="relative z-10 mx-auto table text-center text-4xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 
         before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl">
                         Expense Tracker</h1>
                 </div>

@@ -14,7 +14,7 @@ const semanticCategories = [
     { name: "Napoje gazowane i energetyki", desc: "napój gazowany, cola, pepsi, sprite, fanta, oranżada, napoje energetyczne, red bull, monster, napoje z gazem", image: "/images/cat_soda.png" },
     { name: "Napoje niegazowane i woda", desc: "napój niegazowany, woda mineralna, woda niegazowana, woda lekko gazowana, soki 100%, nektary, syropy owocowe, napoje izotoniczne", image: "/images/cat_water.png" },
     { name: "Alkohole", desc: "piwo, wino, wódka, whisky, rum, gin, likiery, szampan, cydr, napoje alkoholowe", image: "/images/cat_alcohol.png" },
-    { name: "Kosmetyki i higiena", desc: "szampon, żel pod prysznic, mydło, pasta do zębów, papier toaletowy, dezodorant, kremy, maszynki do golenia, podpaski", image: "/images/cat_hygiene.png" },
+    { name: "Kosmetyki i higiena", desc: "szampon, żel pod prysznic, mydło, pasta do zębów, papier toaletowy, dezodorant, kremy, maszynki do golenia", image: "/images/cat_hygiene.png" },
     { name: "Chemia gospodarcza", desc: "proszek do prania, płyn do płukania, płyn do naczyń, kostki do zmywarki, płyn do szyb, worki na śmieci, gąbki", image: "/images/cat_cleaning.png" },
     { name: "Dla zwierząt", desc: "karma dla psa, karma dla kota, puszki dla zwierząt, sucha karma, żwirek dla kota, przysmaki dla zwierząt", image: "/images/cat_pets.png" }
 ];
