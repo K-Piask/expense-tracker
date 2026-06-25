@@ -63,26 +63,31 @@ router.delete("/:id", auth, async (req, res) => {
 router.put("/:id", auth, async (req, res) => {
     try {
         const { name } = req.body;
+
+        if (!name || !String(name).trim()) {
+            return res.status(400).json({ error: "Nazwa jest wymagana." });
+        }
+
         const categoryId = Number(req.params.id);
 
-        const existingCategory = await prisma.category.findFirst({
+        const result = await prisma.category.updateMany({
             where: {
                 id: categoryId,
-                userId: Number(req.user.id)
-            }
-        });
-        if (!existingCategory) {
-            return res.status(404).json({ error: "Nie znaleziono kategorii lub brak uprawnień." });
-        }
-        const updatedCategory = await prisma.category.update({
-            where: {
-                id: categoryId
+                userId: req.user.id
             },
             data: {
-                name: name
+                name: String(name).trim()
             }
         });
-        res.status(200).json(updatedCategory);
+        if (result.count == 0) {
+            return res.status(404).json({ error: "Nie znaleziono kategorii lub brak uprawnień." });
+        }
+
+        res.status(200).json({
+            id: categoryId,
+            name: String(name).trim(),
+            userId: req.user.id
+        });
     } catch (err) {
         console.log(err);
         res.status(500).json({ error: "Błąd podczas aktualizacji kategorii." })

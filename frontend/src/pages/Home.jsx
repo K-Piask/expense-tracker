@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const API = "http://localhost:3000";
 export default function Home() {
     const [error, setError] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
     const [monthlySpend, setMonthlySpend] = useState(0);
 
     const navigate = useNavigate();
@@ -38,10 +39,12 @@ export default function Home() {
             })
             .then((data) => {
                 setMonthlySpend(data.total || "0.00");
-
+                setIsLoading(false);
             })
-            .catch(() => setError("Nie udało się pobrać sumy wydaktów"));
-
+            .catch(() => {
+                setError("Nie udało się pobrać sumy wydaktów");
+                setIsLoading(false);
+            })
 
     }, [navigate]);
 
@@ -52,38 +55,92 @@ export default function Home() {
         navigate("/login");
     }
     return (
-        <div className="neo-background">
+        <div className="neo-page-shell">
             <div className="w-full max-w-3xl flex flex-col gap-6">
+
                 <div className="relative py-1">
-                    <h1 className="neo-logo">
-                        Expense Tracker</h1>
+                    <h1 onClick={() => navigate('/home')} className="neo-brand-title">
+                        Expense Tracker
+                    </h1>
                 </div>
 
                 {error && (
-                    <div className="neo-error">
+                    <div className="neo-alert">
                         <span>BŁĄD: {error}</span>
-                        <button onClick={() => setError("")} className="hover:scale-110">×</button>
+                        <button onClick={() => setError("")} className="hover:scale-110 text-3xl font-black leading-none pb-1">×</button>
                     </div>
                 )}
 
-                <section className="neo-section  flex flex-col gap-5 w-full">
-                    <div>
-                        <label className="neo-label text-4xl text-center tracking-tight">Witaj!</label>
-                        <label className="neo-label text-2xl text-center tracking-tight">W tym miesiącu wydano:</label>
-                        <label className="neo-label text-3xl text-center tracking-tight">{monthlySpend} ZŁ</label>
+                <section className="neo-section items-center p-8">
+
+                    <div className="flex flex-col items-center w-full mb-4">
+                        <h2 className="font-black text-3xl sm:text-4xl uppercase tracking-tighter mb-2">Witaj!</h2>
+                        <span className="text-lg sm:text-xl font-bold uppercase text-slate-600 tracking-tight">W tym miesiącu wydano:</span>
+
+                        <div className="bg-yellow-300 border-4 border-black px-6 py-4 mt-6 mb-2 shadow-[5px_5px_0px_0px_#000] -rotate-2 hover:rotate-0 transition-transform">
+                            <span className="font-black text-4xl tracking-tighter wrap-break-word">
+                                {isLoading ? "..." : `${monthlySpend} ZŁ`}
+                            </span>
+                        </div>
                     </div>
-                    <div className="h-1 w-full bg-black shrink-0"></div>
-                    <div className="flex flex-col w-full h-full gap-4">
-                        <button type="button" onClick={() => navigate("/promotions")} className=" neo-btn text-2xl h-15 hover:bg-yellow-300">&#128269; Wyszukaj promocję</button>
-                        <button type="button" onClick={() => navigate("/dashboard")} className=" neo-btn text-2xl h-15 hover:bg-yellow-300">&#128193; Kategorie wydatków</button>
-                        <button type="button" onClick={() => navigate("/shopping-lists")} className=" neo-btn text-2xl h-15 hover:bg-yellow-300">&#128203; Listy Zakupów</button>
-                        <button type="button" onClick={() => navigate("/dashboard")} className=" neo-btn text-2xl h-15 hover:bg-yellow-300">&#128184; Wydatki</button>
+
+                    <div className="h-1 w-full bg-black shrink-0 mb-4"></div>
+
+                    <div className="flex flex-col w-full gap-5">
+
+                        <button
+                            type="button"
+                            onClick={() => navigate("/dashboard")}
+                            className="neo-btn bg-green-400 hover:bg-green-500 w-full py-6 flex items-center justify-center gap-2 border-5 shadow-[5px_5px_0px_0px_#000]"
+                        >
+                            <span className="text-5xl drop-shadow-[4px_4px_0px_#000]">💸</span>
+                            <span className="text-3xl tracking-tighter">Zarządzaj Wydatkami</span>
+                        </button>
+
+                        <div className="grid grid-cols-2 gap-5 w-full">
+                            <button
+                                type="button"
+                                onClick={() => navigate("/shopping-lists")}
+                                className="neo-btn bg-cyan-300 hover:bg-cyan-400 py-4 flex items-center justify-center gap-3"
+                            >
+                                <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">📋</span>
+                                <span className="text-xl">Listy Zakupów</span>
+                            </button>
+
+                            <button
+                                type="button"
+                                onClick={() => navigate("/categories")}
+                                className="neo-btn bg-purple-300 hover:bg-purple-400 py-4 flex items-center justify-center gap-3"
+                            >
+                                <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">📁</span>
+                                <span className="text-xl">Kategorie</span>
+                            </button>
+                        </div>
+
+                        <button
+                            type="button"
+                            onClick={() => navigate("/promotions")}
+                            className="neo-btn bg-pink-300 hover:bg-pink-400 py-4 flex items-center justify-center gap-3 border-dashed"
+                        >
+                            <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">🔍</span>
+                            <span className="text-xl">Wyszukaj promocję na szybko</span>
+                        </button>
+
                     </div>
                 </section>
-                <div className="flex justify-center gap-4">
 
-                    <button type="button" onClick={handleLogout} className="bg-red-300 neo-btn py-2 hover:bg-red-400 w-1/3">Wyloguj się</button>
-                </div>
+
+
+            </div>
+            <div className="flex justify-center w-full mt-8">
+                <button
+                    type="button"
+                    onClick={handleLogout}
+                    className="flex neo-btn bg-red-400 hover:bg-red-500 py-3 px-10 gap-1"
+                >
+                    <span className="text-3xl leading-none -mt-1.5">⏻</span>
+                    <span>Wyloguj się</span>
+                </button>
             </div>
         </div>
     )

@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard';
 import Promotions from './pages/Promotions';
 import ShoppingLists from './pages/ShoppingLists';
 import ShoppingListDetails from './pages/ShoppingListDetails';
+import Categories from './pages/Categories';
 import Home from './pages/Home';
 
 const ProtectedRoute = ({ children }) => {
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/promotions" element={<ProtectedRoute><Promotions /></ProtectedRoute>} />
         <Route path="/shopping-lists" element={<ProtectedRoute><ShoppingLists /></ProtectedRoute>} />
         <Route path="/shopping-list-details/:id" element={<ProtectedRoute><ShoppingListDetails /></ProtectedRoute>} />
+        <Route path="/categories" element={<ProtectedRoute><Categories /></ProtectedRoute>} />
         <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />
 
         <Route path="/" element={<Navigate to="/home" replace />} />
