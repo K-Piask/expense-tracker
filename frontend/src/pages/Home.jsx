@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const API = "http://localhost:3000";
+const API = import.meta.env.VITE_API_URL;
 export default function Home() {
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState(true);
@@ -79,8 +79,9 @@ export default function Home() {
 
                         <div className="bg-yellow-300 border-4 border-black px-6 py-4 mt-6 mb-2 shadow-[5px_5px_0px_0px_#000] -rotate-2 hover:rotate-0 transition-transform">
                             <span className="font-black text-4xl tracking-tighter wrap-break-word">
-                                {isLoading ? "..." : `${monthlySpend} ZŁ`}
+                                {isLoading ? "..." : `${monthlySpend}`}
                             </span>
+                            <span className="text-xl font-black uppercase ml-2">PLN</span>
                         </div>
                     </div>
 
@@ -90,7 +91,7 @@ export default function Home() {
 
                         <button
                             type="button"
-                            onClick={() => navigate("/dashboard")}
+                            onClick={() => navigate("/expenses")}
                             className="neo-btn bg-green-400 hover:bg-green-500 w-full py-6 flex items-center justify-center gap-2 border-5 shadow-[5px_5px_0px_0px_#000]"
                         >
                             <span className="text-5xl drop-shadow-[4px_4px_0px_#000]">💸</span>

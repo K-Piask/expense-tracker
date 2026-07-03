@@ -29,7 +29,6 @@ export default function Dashboard() {
         };
     };
 
-    // Kategorie
     useEffect(() => {
         const headers = getAuthHeaders();
         if (!headers) {
@@ -56,7 +55,6 @@ export default function Dashboard() {
             .catch(() => setError("Nie udało się pobrać kategorii"));
     }, [navigate]);
 
-    // Wydatki z filtrami
     const fetchExpenses = () => {
         const headers = getAuthHeaders();
         if (!headers) {
@@ -95,7 +93,6 @@ export default function Dashboard() {
         fetchExpenses();
     }, [filterCategoryId, filterFrom, filterTo]);
 
-    // Dodawanie wydatku
     const addExpense = async (payload) => {
         setError("");
 

@@ -9,11 +9,9 @@ export default function ExpenseForm({ categories, onAdd }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        //walidacja minimum
         if (!formAmount || !String(formAmount).trim()) return;
         if (!formDate) return;
 
-        //zamiana zł na grosze
         const amountZloty = Math.round(Number(formAmount) * 100);
 
 
@@ -27,7 +25,6 @@ export default function ExpenseForm({ categories, onAdd }) {
         const ok = await onAdd(payload);
 
         if (ok) {
-            // czyścimy pola po dodaniu (UI)
             setFormAmount("");
             setFormDate("");
             setFormNote("");
@@ -41,7 +38,6 @@ export default function ExpenseForm({ categories, onAdd }) {
             <h2 className="text-2xl font-black italic uppercase">Dodaj Nowy Wydatek</h2>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                {/* Kwota i Data obok siebie */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="flex flex-col">
                         <label className="neo-label">Kwota (zł)</label>

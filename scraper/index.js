@@ -11,7 +11,7 @@ async function scrapeAuchanPromotions() {
 
     try {
         console.log("[INFO] Navigating to target URL...");
-        await page.goto('https://zakupy.auchan.pl/promotions', {
+        await page.goto(process.env.SCRAPER_TARGET_URL, {
             waitUntil: 'networkidle',
             timeout: 60000
         });

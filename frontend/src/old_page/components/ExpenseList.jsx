@@ -1,5 +1,4 @@
 export default function ExpenseList({ expenses }) {
-    // Przywrócona informacja o braku wydatków (poprzednia wersja)
     if (!expenses.length) {
         return (
             <div className="text-center py-10">
@@ -13,7 +12,6 @@ export default function ExpenseList({ expenses }) {
 
     return (
         <div className="flex flex-col gap-5">
-            {/* Nagłówek sekcji */}
             <div className="flex justify-between items-end px-1">
                 <h2 className="text-2xl font-black italic uppercase">Twoje Wydatki</h2>
                 <span className="bg-black text-white px-3 py-1 rounded-lg font-black text-sm uppercase tracking-tighter">
@@ -21,7 +19,6 @@ export default function ExpenseList({ expenses }) {
                 </span>
             </div>
 
-            {/* Tabela: Zrównoważony rozmiar (border-4, shadow-6) */}
             <div className="overflow-x-auto border-4 border-black rounded-2xl shadow-[6px_6px_0px_0px_#000]">
                 <table className="w-full text-left border-collapse bg-white">
                     <thead className="bg-black text-white border-b-4 border-black">

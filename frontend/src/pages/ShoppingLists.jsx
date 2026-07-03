@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API = "http://localhost:3000";
+const API = import.meta.env.VITE_API_URL;
 
 export default function ShoppingLists() {
     const [shoppingLists, setShoppingLists] = useState([]);
@@ -190,7 +190,7 @@ export default function ShoppingLists() {
 
                                                 <div className="flex justify-between items-end mt-auto font-bold">
                                                     <span className="text-md bg-white px-2 py-1 border-2 border-black ">
-                                                        Elementy: {list.shoppingListItems ? list.shoppingListItems.length : 0}
+                                                        {list.shoppingListItems.length > 0 ? "Elementy: " + list.shoppingListItems.length : "Brak elementów"}
                                                     </span>
                                                     <span className="text-2xl">&#10140;</span>
                                                 </div>

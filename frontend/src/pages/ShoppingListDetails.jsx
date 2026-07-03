@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const API = "http://localhost:3000";
+const API = import.meta.env.VITE_API_URL;
 
 export default function ShoppingListDetails() {
     const [list, setList] = useState(null);
@@ -371,12 +371,12 @@ export default function ShoppingListDetails() {
                 )}
 
 
-                <section className="neo-section relative flex flex-col gap-6 w-full min-h-[50vh] ">
+                <section className="neo-section relative flex flex-col gap-6 w-full">
 
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
 
                         <div className="relative w-fit max-w-full mx-auto lg:mx-0 text-center">
-                            <h2 className={`relative z-10 inline-block w-fit max-w-full text-3xl 
+                            <h2 className={`relative break-all z-10 inline-block w-fit max-w-full text-3xl 
                                 sm:text-4xl font-black uppercase tracking-tighter border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0px_#000] wrap-break-word transition-all ${bgColor} ${rotation}`}>
                                 {isLoading ? "Ładowanie..." : list?.name}
                             </h2>
@@ -444,7 +444,7 @@ export default function ShoppingListDetails() {
 
                                 <div
                                     key={item.id}
-                                    className={`w-[90%] group rounded-3xl flex items-center justify-center  border-4 border-black pr-5 pl-5 p-3 ${item.promotionId ? 'bg-yellow-200 hover:bg-yellow-300' : 'bg-slate-200 hover:bg-slate-300'}  transition-colors`}
+                                    className={`w-[90%] shadow-[4px_4px_0px_0px_#000] group rounded-3xl flex items-center justify-center  border-4 border-black pr-5 pl-5 p-3 ${item.promotionId ? 'bg-yellow-200 hover:bg-yellow-300' : 'bg-slate-200 hover:bg-slate-300'}  transition-colors`}
                                 >
                                     <div className="flex items-start gap-4  w-full">
 
@@ -455,14 +455,14 @@ export default function ShoppingListDetails() {
                                             className="neo-checkbox"
 
                                         >
-                                            {item.isBought && <span className="text-xl font-black text-black leading-none m-1">&#10003;</span>}
+                                            {item.isBought && <span className="text-2xl font-black text-black leading-none m-1">&#10003;</span>}
                                         </button>
 
                                         {/* Numer i nazwa */}
-                                        <div className="flex items-baseline gap-3">
+                                        <div className="flex items-baseline gap-3 my-0.5">
                                             <span className="text-slate-500 font-black text-sm">{index + 1}.</span>
 
-                                            <span className={`font-bold text-xl uppercase tracking-tighter   ${item.isBought ? `line-through text-blue-800 ` : ''}`}>
+                                            <span className={`font-bold text-xl uppercase tracking-tighter   ${item.isBought ? `line-through text-orange-500 ` : ''}`}>
                                                 {activePromotion ? activePromotion.name : item.name}
                                             </span>
 
@@ -483,7 +483,7 @@ export default function ShoppingListDetails() {
                         })}
                     </div>
 
-                    <div className='mt-auto flex w-full justify-between'>
+                    <div className='mt-5 flex w-full justify-between'>
 
                         {/* Checkbox czy wyświetlić promocje */}
                         <label className="inline-flex items-center gap-4 cursor-pointer group ">
@@ -542,7 +542,7 @@ export default function ShoppingListDetails() {
                 {
                     showPromotions && totalItems !== 0 && (
                         <section className='neo-section flex flex-col w-full'>
-                            <label className="neo-label text-3xl text-center tracking-tight">Znalezione Promocje</label>
+                            <label className="neo-label text-3xl uppercase text-center tracking-tight">Znalezione Promocje</label>
                             <div className="h-1 w-full bg-black shrink-0"></div>
 
                             {isLoadingPromos ? (
