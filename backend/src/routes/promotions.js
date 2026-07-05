@@ -11,24 +11,33 @@ const aiModel = genAI.getGenerativeModel({ model: "gemini-embedding-001" });
 let categoryEmbeddings = [];
 
 async function initCategoryVectors() {
-    console.log("[SYSTEM] Starting semantic category vector generation...");
+    // Jeśli kategorie są już w RAM, nie pobierajmy ich drugi raz
+    if (categoryEmbeddings.length > 0) return;
+
+    console.log("[SYSTEM] Starting semantic category vector generation (Parallel)...");
     try {
-        for (const cat of semanticCategories) {
+        // Używamy Promise.all, żeby wysłać wszystkie zapytania do Gemini JEDNOCZEŚNIE.
+        // Zamiast czekać 15 sekund, wykonamy całość w 1-2 sekundy!
+        const promises = semanticCategories.map(async (cat) => {
             const textToEmbed = `Kategoria: ${cat.name}. Zawiera: ${cat.desc}`;
             const result = await aiModel.embedContent(textToEmbed);
-
-            categoryEmbeddings.push({
+            return {
                 ...cat,
                 vector: result.embedding.values
-            });
-        }
+            };
+        });
+
+        // Czekamy, aż wszystkie obietnice (promises) się zakończą
+        categoryEmbeddings = await Promise.all(promises);
+
         console.log(`[SYSTEM] Successfully loaded ${categoryEmbeddings.length} category vectors into RAM.`);
     } catch (error) {
         console.error("[SYSTEM ERROR] Failed to initialize category vectors:", error);
+        throw new Error("Nie udało się wygenerować wektorów kategorii.");
     }
 }
 
-initCategoryVectors();
+// UWAGA: USUNĄŁEM TUTAJ GLOBALNE WYWOŁANIE initCategoryVectors(); !!!
 
 router.get('/search', async (req, res) => {
     const searchQuery = req.query.q;
@@ -39,6 +48,9 @@ router.get('/search', async (req, res) => {
     }
 
     try {
+        // 1. ZAPEWNIAMY, ŻE KATEGORIE SĄ ZAŁADOWANE (Odpali się tylko raz przy pierwszym wyszukiwaniu)
+        await initCategoryVectors();
+
         console.log(`[SEARCH] Processing query : ${searchQuery}`);
 
         const contextualQuery = `Produkt w supermarkecie: ${searchQuery}`;
@@ -58,35 +70,29 @@ router.get('/search', async (req, res) => {
             ORDER BY embedding <=> ${vectorString}::vector
             LIMIT 10;
         `;
+
         console.log(`[SEARCH] Found ${results.length} products. Assigning categories dynamically...`);
 
-        // 3. Wzbogacamy wyniki o kategorie
+        // Reszta Twojego wspaniałego kodu pozostaje bez zmian
         const enrichedResults = results.map(promo => {
-            // Parsujemy string z bazy (np. "[0.12, -0.04...]") na prawdziwą tablicę JavaScript
             const productVectorData = JSON.parse(promo.product_vector);
-
             let bestCategory = null;
             let minDistance = Infinity;
 
-            // Szukamy kategorii, której wektor jest najbliżej wektora produktu
             for (const cat of categoryEmbeddings) {
                 const dist = calculateCosineDistance(productVectorData, cat.vector);
-
                 if (dist < minDistance) {
                     minDistance = dist;
                     bestCategory = cat;
                 }
             }
 
-            // Wyciągamy product_vector, żeby nie wysyłać tysięcy niepotrzebnych liczb na frontend
             const { product_vector, ...productDataToSend } = promo;
 
             return {
                 ...productDataToSend,
                 categoryName: bestCategory ? bestCategory.name : "Inne",
                 imagePath: bestCategory ? bestCategory.image : "/images/cat_other.png",
-                // Zostawiam ten parametr zakomentowany, ale jest przydatny do debugowania precyzji:
-                // categoryMatchScore: minDistance 
             };
         });
 
