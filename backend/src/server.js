@@ -24,7 +24,16 @@ app.use("/api/promotions", promotionsRouter);
 app.use("/api/shopping-lists", shoppingListRouter);
 app.use("/api/auth", authRouter);
 
-const PORT = 3000;
+/*const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`API działa na http://localhost:${PORT}`);
-});
+});*/
+
+if (process.env.NODE_ENV !== 'production') {
+    const PORT = 3000;
+    app.listen(PORT, () => {
+        console.log(`API działa lokalnie na http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
