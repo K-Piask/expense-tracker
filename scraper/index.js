@@ -6,7 +6,7 @@ const fs = require('fs');
 
 async function scrapePromotions() {
     console.log("[INFO] Initializing scraping engine in stealth mode...");
-    const browser = await chromium.launch({ headless: false });
+    const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
     try {
@@ -36,7 +36,7 @@ async function scrapePromotions() {
             }
         });
 
-        const MAX_PRODUCTS = 100;
+        const MAX_PRODUCTS = 1000;
 
         const extractedData = await page.evaluate(async (limit) => {
             const delay = (min, max) => new Promise(resolve => setTimeout(resolve, Math.random() * (max - min) + min));
@@ -105,7 +105,7 @@ async function scrapePromotions() {
                 }
 
                 window.scrollBy(0, Math.floor(Math.random() * 400) + 300);
-                await delay(1500, 3000);
+                await delay(2500, 4500);
 
                 if (Math.random() < 0.15) {
                     console.log("[ACTION] Simulating human reading pause (Macro delay)...");

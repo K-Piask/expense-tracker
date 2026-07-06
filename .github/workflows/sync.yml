@@ -1,0 +1,37 @@
+name: Daily Sync
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+jobs:
+  run-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Scraper
+        run: npm install
+        working-directory: ./scraper
+
+      - name: Install Backend
+        run: npm install
+        working-directory: ./backend
+
+      - name: Run Scraper
+        run: npm start
+        working-directory: ./scraper
+        env:
+          SCRAPER_TARGET_URL: ${{ secrets.SCRAPER_TARGET_URL }}
+
+      - name: Run Import
+        run: node backend/scripts/importPromotions.js
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}

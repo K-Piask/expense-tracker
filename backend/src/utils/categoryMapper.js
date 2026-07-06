@@ -1,5 +1,3 @@
-// backend/utils/categoryMapper.js
-
 const semanticCategories = [
     { name: "Owoce i warzywa", desc: "świeże owoce, warzywa, jabłka, banany, pomidory, ziemniaki, sałata, cebula, cytryny, marchew", image: "/images/cat_veges.png" },
     { name: "Pieczywo i cukiernia", desc: "chleb, bułki, bagietki, rogaliki, pączki, drożdżówki, ciasta, torty, pieczywo chrupkie", image: "/images/cat_bakery.png" },
@@ -19,7 +17,7 @@ const semanticCategories = [
     { name: "Dla zwierząt", desc: "karma dla psa, karma dla kota, puszki dla zwierząt, sucha karma, żwirek dla kota, przysmaki dla zwierząt", image: "/images/cat_pets.png" }
 ];
 
-// Funkcja obliczająca odległość cosinusową (Cosinus Distance) między dwoma wektorami
+// Funkcja obliczająca odległość cosinusową między dwoma wektorami
 function calculateCosineDistance(vecA, vecB) {
     let dotProduct = 0;
     let normA = 0;
