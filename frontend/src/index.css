@@ -82,7 +82,7 @@ body,
   }
 
   .neo-brand-title {
-    @apply relative cursor-pointer hover:scale-105 transition-transform z-10 mx-auto table text-center text-5xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 mb-6 before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl;
+    @apply relative cursor-pointer hover:scale-105 transition-transform z-10 mx-auto table text-center text-3xl md:text-6xl font-black text-white uppercase tracking-tighter italic leading-none pt-2 pb-4 px-10 mb-6 before:content-[''] before:absolute before:inset-0 before:-z-10 before:bg-slate-950 before:-skew-x-11 before:rounded-2xl shadow-2xl;
   }
 
   .neo-alert {

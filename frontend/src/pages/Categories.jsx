@@ -186,7 +186,7 @@ export default function Categories() {
 
                 <section className="neo-section relative flex flex-col ">
 
-                    <div className="flex justify-between items-center gap-4">
+                    <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <label className="neo-label text-3xl tracking-tight">Kategorie</label>
                         {/* Przycisk dodawania */}
                         <button
@@ -214,7 +214,7 @@ export default function Categories() {
 
                     {/* Lista kategorii */}
                     {!isLoading && categories.length > 0 && (
-                        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-5 mt-4 p-4">
+                        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-5 md:mt-4 p-4">
                             {categories.map((cat) => {
                                 const bgColor = tagColors[cat.id % tagColors.length];
 
@@ -226,7 +226,7 @@ export default function Categories() {
                                     >
                                         <div className="w-5 h-5 rounded-full border-[3px] border-black bg-white/70 shrink-0"></div>
 
-                                        <span className="font-black break-all text-xl uppercase tracking-tighter pt-0.5">
+                                        <span className="font-black break-all text-sm md:text-xl uppercase tracking-tighter pt-0.5">
                                             {cat.name}
                                         </span>
                                     </button>

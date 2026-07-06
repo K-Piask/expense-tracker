@@ -77,7 +77,7 @@ export default function Promotions() {
                 <section className="neo-section">
                     <label className="neo-label text-3xl text-center tracking-tight">Wyszukiwarka Promocji</label>
                     <div className="h-1 w-full bg-black shrink-0"></div>
-                    <form onSubmit={handlePromotions} className="flex w-full gap-4 shrink-0">
+                    <form onSubmit={handlePromotions} className="flex flex-col md:flex-row w-full gap-4 shrink-0">
                         <input
                             type="text"
                             className="neo-input flex-1 py-4 text-xl"
@@ -121,7 +121,7 @@ export default function Promotions() {
                         )}
 
                         {!isLoading && promotions.length > 0 && (
-                            <div className="neo-promo-grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 content-start h-full pr-2 pb-2">
+                            <div className="neo-promo-grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 content-start h-full pr-2 pb-2">
 
 
 

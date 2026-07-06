@@ -4,7 +4,7 @@ chromium.use(stealth);
 
 const fs = require('fs');
 
-async function scrapeAuchanPromotions() {
+async function scrapePromotions() {
     console.log("[INFO] Initializing scraping engine in stealth mode...");
     const browser = await chromium.launch({ headless: false });
     const page = await browser.newPage();
@@ -134,4 +134,4 @@ async function scrapeAuchanPromotions() {
     }
 }
 
-scrapeAuchanPromotions();
+scrapePromotions();

@@ -160,7 +160,7 @@ export default function ShoppingLists() {
                         )}
 
                         {!isLoading && shoppingLists.length > 0 && (
-                            <div className="neo-card-grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 content-start p-3 pr-2 pb-2">
+                            <div className="neo-card-grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 content-start p-3 pr-2 pb-2">
 
 
 

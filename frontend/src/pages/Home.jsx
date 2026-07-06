@@ -56,7 +56,7 @@ export default function Home() {
     }
     return (
         <div className="neo-page-shell">
-            <div className="w-full max-w-3xl flex flex-col gap-6">
+            <div className="w-full max-w-3xl flex flex-col gap-1 md:gap-6">
 
                 <div className="relative py-1">
                     <h1 onClick={() => navigate('/home')} className="neo-brand-title">
@@ -71,50 +71,50 @@ export default function Home() {
                     </div>
                 )}
 
-                <section className="neo-section items-center p-8">
+                <section className="neo-section items-center p-6 md:p-8">
 
-                    <div className="flex flex-col items-center w-full mb-4">
-                        <h2 className="font-black text-3xl sm:text-4xl uppercase tracking-tighter mb-2">Witaj!</h2>
-                        <span className="text-lg sm:text-xl font-bold uppercase text-slate-600 tracking-tight">W tym miesiącu wydano:</span>
+                    <div className="flex flex-col items-center w-full mb-2 md:mb-4">
+                        <h2 className="font-black text-2xl md:text-4xl uppercase tracking-tighter mb-2">Witaj!</h2>
+                        <span className="text-base md:text-xl font-bold uppercase text-slate-600 tracking-tight">W tym miesiącu wydano:</span>
 
-                        <div className="bg-yellow-300 border-4 border-black px-6 py-4 mt-6 mb-2 shadow-[5px_5px_0px_0px_#000] -rotate-2 hover:rotate-0 transition-transform">
-                            <span className="font-black text-4xl tracking-tighter wrap-break-word">
+                        <div className="bg-yellow-300 border-4 border-black px-4 md:px-6 py-2 md:py-4 mt-3 md:mt-6 md:mb-2 shadow-[5px_5px_0px_0px_#000] -rotate-2 hover:rotate-0 transition-transform">
+                            <span className="font-black text-2xl md:text-4xl tracking-tighter wrap-break-word">
                                 {isLoading ? "..." : `${monthlySpend}`}
                             </span>
                             <span className="text-xl font-black uppercase ml-2">PLN</span>
                         </div>
                     </div>
 
-                    <div className="h-1 w-full bg-black shrink-0 mb-4"></div>
+                    <div className="h-1 w-full bg-black shrink-0 mb-2 md:mb-4"></div>
 
                     <div className="flex flex-col w-full gap-5">
 
                         <button
                             type="button"
                             onClick={() => navigate("/expenses")}
-                            className="neo-btn bg-green-400 hover:bg-green-500 w-full py-6 flex items-center justify-center gap-2 border-5 shadow-[5px_5px_0px_0px_#000]"
+                            className="neo-btn bg-green-400 hover:bg-green-500 w-full py-3 md:py-5 flex items-center justify-center gap-2 border-5 shadow-[5px_5px_0px_0px_#000]"
                         >
-                            <span className="text-5xl drop-shadow-[4px_4px_0px_#000]">💸</span>
-                            <span className="text-3xl tracking-tighter">Zarządzaj Wydatkami</span>
+                            <span className="text-3xl md:text-5xl drop-shadow-[4px_4px_0px_#000]">💸</span>
+                            <span className="text-xl md:text-3xl tracking-tighter">Zarządzaj Wydatkami</span>
                         </button>
 
                         <div className="grid grid-cols-2 gap-5 w-full">
                             <button
                                 type="button"
                                 onClick={() => navigate("/shopping-lists")}
-                                className="neo-btn bg-cyan-300 hover:bg-cyan-400 py-4 flex items-center justify-center gap-3"
+                                className="neo-btn bg-cyan-300 hover:bg-cyan-400 py-4 flex flex-col md:flex-row items-center justify-center gap-3"
                             >
-                                <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">📋</span>
-                                <span className="text-xl">Listy Zakupów</span>
+                                <span className="text-2xl md:text-3xl drop-shadow-[4px_4px_0px_#000]">📋</span>
+                                <span className="text-lg md:text-xl">Listy Zakupów</span>
                             </button>
 
                             <button
                                 type="button"
                                 onClick={() => navigate("/categories")}
-                                className="neo-btn bg-purple-300 hover:bg-purple-400 py-4 flex items-center justify-center gap-3"
+                                className="neo-btn bg-purple-300 hover:bg-purple-400 py-4 flex flex-col md:flex-row items-center justify-center gap-3"
                             >
-                                <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">📁</span>
-                                <span className="text-xl">Kategorie</span>
+                                <span className="text-2xl md:text-3xl drop-shadow-[4px_4px_0px_#000]">📁</span>
+                                <span className="text-lg md:text-xl">Kategorie</span>
                             </button>
                         </div>
 
@@ -123,8 +123,8 @@ export default function Home() {
                             onClick={() => navigate("/promotions")}
                             className="neo-btn bg-pink-300 hover:bg-pink-400 py-4 flex items-center justify-center gap-3 border-dashed"
                         >
-                            <span className="text-3xl drop-shadow-[4px_4px_0px_#000]">🔍</span>
-                            <span className="text-xl">Wyszukaj promocję na szybko</span>
+                            <span className="text-2xl md:text-3xl drop-shadow-[4px_4px_0px_#000]">🔍</span>
+                            <span className="text-base md:text-xl">Wyszukaj promocję na szybko</span>
                         </button>
 
                     </div>
@@ -133,14 +133,13 @@ export default function Home() {
 
 
             </div>
-            <div className="flex justify-center w-full mt-8">
+            <div className="flex justify-center w-full mt-10 md:mt-8">
                 <button
                     type="button"
                     onClick={handleLogout}
-                    className="flex neo-btn bg-red-400 hover:bg-red-500 py-3 px-10 gap-1"
+                    className="flex neo-btn bg-red-400 hover:bg-red-500 py-3 px-8 "
                 >
-                    <span className="text-3xl leading-none -mt-1.5">⏻</span>
-                    <span>Wyloguj się</span>
+                    <span>&#10094; Wyloguj się</span>
                 </button>
             </div>
         </div>

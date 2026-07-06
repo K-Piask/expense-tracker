@@ -204,7 +204,7 @@ export default function Expenses() {
 
     return (
         <div className="neo-page-shell">
-            <div className="w-full max-w-5xl flex flex-col gap-6">
+            <div className="w-full max-w-5xl flex flex-col gap-1 md:gap-6">
                 <div className="relative py-1">
                     <h1 onClick={() => navigate("/home")} className="neo-brand-title cursor-pointer">
                         Expense Tracker
@@ -313,7 +313,7 @@ export default function Expenses() {
                                     </span>
                                 </div>
                             ) : (
-                                <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                                     {sortedExpenses.map((expense) => {
                                         const categoryName = expense.category?.name || "Brak kategorii";
                                         const stripeColorClass = expense.category
@@ -325,7 +325,7 @@ export default function Expenses() {
                                                 key={expense.id}
                                                 type="button"
                                                 onClick={() => navigate(`/expense-details/${expense.id}`)}
-                                                className="group relative text-left w-full min-h-55 flex flex-col border-4 border-black bg-slate-100 shadow-[4px_4px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] transition-all duration-200 p-4"
+                                                className="group relative text-left w-full md:min-h-55 flex flex-col border-4 border-black bg-slate-100 shadow-[4px_4px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[8px_8px_0px_0px_#000] transition-all duration-200 p-4"
                                             >
                                                 <div className={`absolute left-0 top-0 h-full w-3 border-r-4 border-black ${stripeColorClass}`}></div>
                                                 <div className="absolute left-3 top-0 bottom-0 w-0 border-l-4 border-dashed border-black/25"></div>
@@ -334,10 +334,10 @@ export default function Expenses() {
 
                                                     <div className="flex flex-col gap-3">
                                                         <div className="flex items-center gap-2 flex-wrap">
-                                                            <span className="bg-black text-white px-3 py-1 border-2 border-black font-black text-xs uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
+                                                            <span className="bg-black text-white px-3 py-1 border-2 border-black font-black text-[0.6rem] md:text-xs uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]">
                                                                 {formatDate(expense.date)}
                                                             </span>
-                                                            <span className={`${stripeColorClass} border-2 border-black px-3 py-1 font-black break-all text-sm uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]`}>
+                                                            <span className={`${stripeColorClass} border-2 border-black px-3 py-1 font-black break-all text-[0.8rem] md:text-sm uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]`}>
                                                                 {categoryName}
                                                             </span>
                                                             {expense.shoppingListId && (
@@ -345,28 +345,29 @@ export default function Expenses() {
                                                                     className="bg-yellow-300 border-2 border-black px-2.5 py-1 text-base shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)] flex items-center justify-center"
                                                                     title={expense.shoppingList?.name || "Powiązano z listą zakupów"}
                                                                 >
-                                                                    <span className="text-xl drop-shadow-[2px_2px_0px_#000]">📋✓</span>
+                                                                    <span className="text-base md:text-xl drop-shadow-[2px_2px_0px_#000]">📋</span>
+                                                                    <span className="font-black text-base md:text-xl">✓</span>
                                                                 </span>
                                                             )}
                                                         </div>
 
-                                                        <p className="font-bold text-lg text-slate-800 leading-tight wrap-break-word mt-2 truncate">
+                                                        <p className="font-bold text-sm md:text-lg text-slate-800 leading-tight wrap-break-word mt-2 truncate">
                                                             {expense.note || <span className="italic text-slate-400">Brak notatki</span>}
                                                         </p>
                                                     </div>
 
-                                                    <div className="flex flex-col md:flex-row justify-between items-center gap-3 pt-4 border-t-4 border-dashed border-black/25 mt-6">
+                                                    <div className="flex flex-row justify-between items-center gap-3 pt-4 border-t-4 border-dashed border-black/25 mt-6">
                                                         <div className="font-bold">
-                                                            <span className="text-md bg-white whitespace-nowrap px-2 py-1 border-2 border-black ">
+                                                            <span className="text-sm md:text-md bg-white whitespace-nowrap px-2 py-1 border-2 border-black ">
                                                                 {expense.expenseItems.length > 0 ? "Elementy: " + expense.expenseItems.length : "Brak elementów"}
                                                             </span>
                                                         </div>
 
                                                         <div className="text-right">
-                                                            <div className="text-4xl font-black tracking-tighter leading-none text-black">
+                                                            <div className="text-3xl md:text-4xl font-black tracking-tighter leading-none text-black">
                                                                 {formatAmount(expense.totalAmount)}
                                                             </div>
-                                                            <div className="text-sm font-black uppercase tracking-widest text-slate-500 mt-1">
+                                                            <div className="text-[0.6rem] md:text-sm font-black uppercase tracking-widest text-slate-500 mt-1">
                                                                 PLN
                                                             </div>
                                                         </div>

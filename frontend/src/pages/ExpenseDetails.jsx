@@ -480,7 +480,7 @@ export default function ExpenseDetails() {
                                         <span className="text-3xl sm:text-4xl font-black uppercase tracking-tighter">
                                             w kat.
                                         </span>
-                                        <span className={`${stripeColorClass} border-3 border-black px-4 py-2 font-black break-all text-sm sm:text-lg uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]`}>
+                                        <span className={`${stripeColorClass} border-3 border-black px-4 py-2 font-black wrap-break-word text-sm sm:text-lg uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(0,0,0,0.3)]`}>
                                             {expense.category.name}
                                         </span>
                                     </div>
@@ -526,7 +526,7 @@ export default function ExpenseDetails() {
                                             >
                                                 <div className={`absolute left-0 top-0 h-full w-3 ${stripeColorClass} border-r-4 border-black`}></div>
 
-                                                <div className="pl-6 flex items-center gap-4">
+                                                <div className="pl-6 flex flex-col md:flex-row items-center gap-4">
                                                     <div className="flex-1 min-w-0">
                                                         <div className="flex items-center justify-between gap-2">
                                                             <h3 className="text-xl sm:text-2xl font-black uppercase tracking-tighter wrap-break-word">
@@ -575,7 +575,7 @@ export default function ExpenseDetails() {
                                     </div>
                                 </div>
 
-                                <div className="flex  gap-4 w-auto ">
+                                <div className="flex flex-col md:flex-row gap-4 w-auto ">
                                     <button
                                         type="button"
                                         onClick={() => {
@@ -585,14 +585,14 @@ export default function ExpenseDetails() {
                                             setEditNote(expense?.note || "");
                                             setModalConfig({ isOpen: true, type: "edit-expense" });
                                         }}
-                                        className="neo-btn bg-green-400 hover:bg-green-500 px-8 py-3 text-lg"
+                                        className="neo-btn bg-green-400 hover:bg-green-500 px-3 md:px-8 md:py-3 text-base md:text-lg"
                                     >
                                         Edytuj
                                     </button>
                                     <button
                                         type="button"
                                         onClick={() => setModalConfig({ isOpen: true, type: "delete-expense" })}
-                                        className="neo-btn bg-red-400 hover:bg-red-500 px-8 py-3 text-lg"
+                                        className="neo-btn bg-red-400 hover:bg-red-500 px-3 md:px-8 md:py-3 text-base md:text-lg"
                                     >
                                         Usuń
                                     </button>
@@ -625,7 +625,7 @@ export default function ExpenseDetails() {
 
                         <div className="flex flex-col gap-4">
                             <div className="flex items-center justify-between gap-4">
-                                <h2 className={`relative break-all z-10 inline-block w-fit max-w-full text-xl font-black uppercase tracking-tighter border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0px_#000] wrap-break-word transition-all ${bgColor} ${rotation}`}>
+                                <h2 className={`relative z-10 inline-block w-fit max-w-full text-xl font-black uppercase tracking-tighter border-4 border-black px-4 py-2 shadow-[4px_4px_0px_0px_#000] wrap-break-word transition-all ${bgColor} ${rotation}`}>
                                     {isLoading ? "Ładowanie..." : expense?.shoppingList?.name}
                                 </h2>
                                 {expense?.shoppingList?.isDone && shoppingListItems.length > 0 && (

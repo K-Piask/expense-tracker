@@ -402,7 +402,7 @@ export default function ShoppingListDetails() {
                     <div className="h-1 w-full bg-black shrink-0"></div>
 
                     {/* Formularz dodawania */}
-                    <form onSubmit={handleAddItem} className="flex sm:flex-row w-full gap-4 ">
+                    <form onSubmit={handleAddItem} className="flex flex-col md:flex-row w-full gap-4 ">
                         <input
                             type="text"
                             className="neo-input flex-1 py-4 text-xl"
@@ -486,7 +486,7 @@ export default function ShoppingListDetails() {
                     <div className='mt-5 flex w-full justify-between'>
 
                         {/* Checkbox czy wyświetlić promocje */}
-                        <label className="inline-flex items-center gap-4 cursor-pointer group ">
+                        <label className="flex flex-col md:flex-row items-center gap-4 cursor-pointer group ">
                             <div className="relative shrink-0">
                                 <input
                                     type="checkbox"
@@ -498,7 +498,7 @@ export default function ShoppingListDetails() {
                                     {showPromotions && <span className="text-3xl font-black block">X</span>}
                                 </div>
                             </div>
-                            <span className="font-black uppercase text-2xl tracking-tighter select-none">
+                            <span className="text-center font-black uppercase text-base md:text-2xl tracking-tighter select-none">
                                 Wyświetl promocje
                             </span>
                         </label>
@@ -508,7 +508,7 @@ export default function ShoppingListDetails() {
 
                         {/* Akcje listy (Edycja / Usuwanie) */}
                         {!isLoading && list && (
-                            <div className="flex w-full sm:w-auto gap-4">
+                            <div className="flex flex-col md:flex-row sm:w-auto gap-4">
                                 <button
                                     onClick={() => {
                                         setEditListName(list.name);
