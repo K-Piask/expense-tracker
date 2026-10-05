@@ -6,8 +6,9 @@ const cors = require("cors");
 const expensesRouter = require("./routes/expenses");
 const categoriesRouter = require("./routes/categories");
 const promotionsRouter = require("./routes/promotions");
-const shoppingListRouter = require("./routes/shoppingLists")
-const authRouter = require("./routes/auth")
+const shoppingListsRouter = require("./routes/shoppingLists");
+const authRouter = require("./routes/auth");
+const webhooksRouter = require("./routes/webhooks");
 
 const app = express();
 
@@ -21,8 +22,9 @@ app.get("/health", (req, res) => {
 app.use("/api/expenses", expensesRouter);
 app.use("/api/categories", categoriesRouter);
 app.use("/api/promotions", promotionsRouter);
-app.use("/api/shopping-lists", shoppingListRouter);
+app.use("/api/shopping-lists", shoppingListsRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/webhooks", webhooksRouter);
 
 /*const PORT = 3000;
 app.listen(PORT, () => {
