@@ -3,6 +3,8 @@ const router = express.Router();
 
 const prisma = require("../db/prisma");
 const auth = require("../middleware/auth")
+const webhookAuth = require("../middleware/webhookAuth");
+
 
 router.get("/", auth, async (req, res) => {
     try {
@@ -14,6 +16,34 @@ router.get("/", auth, async (req, res) => {
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Błąd podczas pobierania kategorii." });
+    }
+});
+
+router.get("/webhook", webhookAuth, async (req, res) => {
+    try {
+        const { email } = req.query;
+
+        if (!email) {
+            return res.status(400).json({ error: "Brak adresu email w zapytaniu." });
+        }
+
+        const user = await prisma.user.findUnique({
+            where: { email: String(email) }
+        });
+
+        if (!user) {
+            return res.status(404).json({ error: "Nie znaleziono użytkownika." });
+        }
+
+        const categories = await prisma.category.findMany({
+            where: { userId: user.id },
+            orderBy: { name: "asc" },
+        });
+
+        res.json(categories);
+    } catch (err) {
+        console.error("Błąd webhooka (kategorie):", err);
+        res.status(500).json({ error: "Błąd serwera." });
     }
 });
 
