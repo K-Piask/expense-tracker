@@ -1,6 +1,6 @@
 # Expense Tracker
 
-> Aplikacja webowa do zarządzania wydatkami, ich kategoriami, listami zakupów i promocjami. Projekt składa się z frontendu w React + Vite oraz backendu w Node.js + Express + Prisma, z bazą PostgreSQL. Aplikacja posiada autoryzację JWT, obsługę kategorii, szczegółów wydatków, list zakupów oraz wyszukiwanie promocji.
+> Zaawansowana aplikacja webowa do zarządzania budżetem domowym, wspierana przez sztuczną inteligencję. Projekt składa się z frontendu (React + Vite) oraz backendu (Node.js + Express + Prisma) z bazą PostgreSQL (pgvector). Aplikacja posiada bezpieczną autoryzację JWT, zautomatyzowane potoki księgowania wydatków (n8n + AI, RPA) oraz autorski system scrapowania i semantycznego wyszukiwania promocji sklepowych.
 
 ---
 
@@ -10,6 +10,63 @@ Aplikacja jest wdrożona na platformie Vercel.
 
 * **Frontend:** [https://expense-tracker-web-delta-seven.vercel.app](https://expense-tracker-web-delta-seven.vercel.app)
 * **Backend API:** [https://expense-tracker-api-sooty.vercel.app](https://expense-tracker-api-sooty.vercel.app)
+
+---
+
+### 🤖 NAJNOWSZA FUNKCJONALNOŚĆ - Automatyczne przetwarzanie paragonów (AI + n8n)
+
+Aplikacja posiada zautomatyzowany potok przetwarzania paragonów przesyłanych mailowo, bez konieczności ręcznego wprowadzania danych przez użytkownika. 
+
+Instancja n8n jest wdrożona na darmowym planie platformy Render. Aby zapobiec usypianiu serwera, zewnętrzny Cron Job odpytuje instancję co 10 minut. Dzięki temu automatyzacja działa nieprzerwanie w tle i jest zawsze gotowa do odbioru nowych wiadomości.
+
+#### Jak to działa:
+1. **Odbiór maila**: Wyzwalacz IMAP nasłuchuje na dedykowanej skrzynce wiadomości z załączonymi zdjęciami paragonów.
+2. **Pobranie kontekstu użytkownika**: n8n odpytuje zabezpieczony kluczem API endpoint `GET /api/categories/webhook`, pobierając listę kategorii przypisanych do nadawcy na podstawie jego adresu e-mail.
+3. **Analiza multimodalna (Google Gemini)**: Model analizuje obraz paragonu, wyciąga datę, łączną kwotę, pozycje (czyszcząc nazwy ze śmieciowych kodów kasowych) oraz dopasowuje wydatek do istniejącej kategorii.
+4. **Zapis do bazy**: Wygenerowany i sparsowany JSON trafia do zabezpieczonego kluczem API endpointa `POST /api/webhooks/receipts` (Prisma + PostgreSQL).
+
+![Schemat przepływu n8n](./docs/n8n_workflow.png)
+
+> Plik z definicją workflow do zaimportowania w n8n: [`automations/n8n-receipt-processing.json`](./automations/n8n-receipt-processing.json)
+
+---
+
+### 🧪 Przetestuj to samodzielnie na żywo!
+
+Zachęcam do przetestowania tej automatyzacji. Cały proces zajmuje tylko chwilę:
+
+1. **Załóż konto:** Wejdź na [https://expense-tracker-web-delta-seven.vercel.app](https://expense-tracker-web-delta-seven.vercel.app) i zarejestruj się, używając adresu e-mail, z którego będziesz wysyłać testowy paragon.
+2. **Dodaj kategorię:** Zanim wyślesz maila, przejdź w aplikacji do zakładki **Kategorie** i dodaj nową kategorię (np. nazwę sklepu z paragonu, "Spożywcze", "Paliwo" itp.). Dzięki temu sztuczna inteligencja będzie wiedziała, do jakiej kategorii przypisać Twój wydatek (w przeciwnym razie wydatek zostanie dodany, ale bez przypisanej kategorii).
+3. **Wyślij paragon:** Wyślij maila na dedykowany adres **`exp.tr.receipts@gmail.com`**, dodając w załączniku wyraźne zdjęcie dowolnego paragonu.
+   > 💡 *Wskazówka: Aby filtry antyspamowe Google nie odrzuciły wiadomości, wpisz dowolny losowy temat oraz krótką treść maila (nie wysyłaj samego załącznika).*
+4. **Sprawdź wynik:** Odczekaj chwilę, odśwież stronę i przejdź do zakładki **Zarządzaj wydatkami**. Gotowe! Wydatek został przeanalizowany przez AI i automatycznie dodany do Twojego konta.
+
+---
+
+### 🤖 Automatyczna weryfikacja wyciągów bankowych (RPA / UiPath)
+
+Projekt zawiera dedykowany moduł Robotic Process Automation stworzony w UiPath. Pełni on rolę zautomatyzowanego audytora, który weryfikuje poprawność danych wprowadzonych do systemu (np. tych z n8n) z rzeczywistymi wyciągami bankowymi, wyłapując potencjalne błędy ludzkie.
+
+#### Jak to działa:
+1. **Logowanie API:** Bot wykonuje request POST do backendu, logując się na konto użytkownika i pobierając dynamiczny token JWT.
+2. **Pobieranie Danych:** Wykonuje autoryzowane żądanie GET, pobiera listę wydatków i parsuje JSON.
+3. **Odczyt Wyciągu:** Wczytuje plik `Statement.xlsx` z eksportem z banku.
+4. **Walidacja in-memory (LINQ):** Za pomocą zapytań VB.NET/LINQ bot przetwarza dane w pamięci. Stosuje *Fuzzy Matching* porównując kwoty i kategorie bez obciążania API.
+5. **Raportowanie:** Generuje wynikowy plik `Report.xlsx` ze statusem dla każdej transakcji (poprawne vs wymagające ręcznej weryfikacji).
+
+**Repozytorium bota RPA:** Zobacz pełny kod oraz wideo demonstracyjne w osobnym repozytorium: [github.com/K-Piask/expense-tracker-reconciliation-rpa](https://github.com/K-Piask/expense-tracker-reconciliation-rpa)
+
+---
+
+### 🛒 Inteligentne wyszukiwanie promocji (Playwright + AI Embeddings)
+
+Aplikacja posiada własny mechanizm śledzenia promocji w popularnym supermarkecie. Zamiast polegać na prostym dopasowywaniu słów kluczowych, system rozumie kontekst produktów dzięki zastosowaniu wyszukiwania semantycznego (wektorowego).
+
+#### Jak to działa:
+1. **Stealth Scraping (Playwright):** Dedykowany skrypt omija zabezpieczenia anty-botowe, symuluje ludzkie zachowanie (pauzy, losowe przewijanie) i obsługuje *Infinite Scroll*, aby wyciągnąć surowe dane o produktach, cenach i kaucjach z dynamicznie ładowanego DOM.
+2. **Generowanie wektorów (Gemini API):** Pobrane dane są wysyłane do modelu `gemini-embedding-001`. AI zamienia nazwy produktów na wielowymiarowe wektory (embeddings), rozumiejąc ich znaczenie (np. wie, że "Kajzerka" i "Chleb" należą do kategorii pieczywa).
+3. **Zapis do bazy (pgvector):** Wektory trafiają do bazy PostgreSQL wykorzystującej rozszerzenie `pgvector`. Skrypt synchronizacyjny dba o aktualność ofert, usuwając przeterminowane promocje.
+4. **Semantyczne dopasowanie:** Podczas tworzenia listy zakupów lub sprawdzania wydatków, aplikacja dopasowuje promocyjne produkty do utworzonych przez Ciebie kategorii i automatycznie przypisuje im odpowiednie obrazy oraz tagi, nawet jeśli nazwy nie pokrywają się w 100%.
 
 ---
 
@@ -35,8 +92,9 @@ Aplikacja jest wdrożona na platformie Vercel.
 | :--- | :--- |
 | **Frontend** | React, Vite, React Router, Fetch API |
 | **Backend** | Node.js, Express, Prisma ORM, PostgreSQL, JSON Web Token, bcrypt |
-| **Baza danych** | PostgreSQL (hostowana na platformie Neon) |
-| **Dodatkowo** | Gemini API (embeddingi), Scraper oparty o Playwright |
+| **Baza danych** | PostgreSQL (hostowana na platformie Neon), rozszerzenie `pgvector` |
+| **Automatyzacja & RPA** | n8n, UiPath Studio, VB.NET, LINQ |
+| **Dodatkowo** | Gemini API (vision & embeddingi), Scraper oparty o Playwright |
 
 ---
 
@@ -48,6 +106,7 @@ Aplikacja jest wdrożona na platformie Vercel.
 | `frontend/` | Aplikacja React |
 | `scraper/` | Pobieranie promocji do pliku JSON |
 | `docs/` | Screeny do README |
+| `automations/` | Plik workflow n8n (JSON) |
 
 ---
 
@@ -78,9 +137,10 @@ Aplikacja jest wdrożona na platformie Vercel.
 | Zmienna | Przeznaczenie |
 | :--- | :--- |
 | `DATABASE_URL` | Backend |
-| `JWT_SECRET` | Backend |
 | `GEMINI_API_KEY` | Backend |
+| `JWT_SECRET` | Backend |
 | `SCRAPER_TARGET_URL` | Backend |
+| `INTEGRATION_API_KEY` | Backend |
 | `VITE_API_URL` | Frontend |
 
 ---
@@ -101,13 +161,14 @@ Folder `scraper` służy do pobierania danych promocyjnych do pliku JSON. Nastę
 
 ## 📈 Plan rozwoju
 
-* Automatyczne dodawanie produktów do wydatku po zeskanowaniu zdjęcia paragonu (OCR)
-* Rozbudowa statystyk, wykresów wydatków oraz analityki zakupów
-* Bardziej szczegółowe podsumowania miesięczne
-* Automatyczne przenoszenie ceny przy imporcie z listy zakupów do wydatku (jeśli wybrano promocję)
-* Dalsze usprawnianie mechanizmu wyszukiwania promocji
-* Poprawa responsywności (RWD) i lepsze dostosowanie interfejsu do mniejszych ekranów
-* Wprowadzenie testów jednostkowych
+* [x] Automatyczne dodawanie produktów do wydatku po zeskanowaniu zdjęcia paragonu (AI/OCR)
+* [x] Zautomatyzowany audyt wprowadzonych danych z wyciągami bankowymi (RPA)
+* [ ] Rozbudowa statystyk, wykresów wydatków oraz analityki zakupów
+* [ ] Bardziej szczegółowe podsumowania miesięczne
+* [ ] Automatyczne przenoszenie ceny przy imporcie z listy zakupów do wydatku (jeśli wybrano promocję)
+* [ ] Dalsze usprawnianie mechanizmu wyszukiwania promocji
+* [ ] Poprawa responsywności (RWD) i lepsze dostosowanie interfejsu do mniejszych ekranów
+* [ ] Wprowadzenie testów jednostkowych
 
 ---
 
@@ -123,6 +184,7 @@ Projekt powstał z dwóch głównych powodów - jako narzędzie użytkowe oraz k
 * Budowa aplikacji fullstack od podstaw do wdrożenia.
 * Projektowanie API REST oraz modelowanie relacji w bazie danych.
 * Praca z autoryzacją (JWT) i integracja z zewnętrznym API (Gemini).
+* Integracja wielosystemowa (Web + n8n + RPA).
 
 ---
 

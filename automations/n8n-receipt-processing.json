@@ -1,0 +1,222 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "downloadAttachments": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2.2,
+      "position": [
+        -272,
+        -16
+      ],
+      "id": "57ed8a33-01c0-4efe-a12a-d7922b609005",
+      "name": "Email Trigger (IMAP)",
+      "credentials": {
+        "imap": {
+          "id": "YOUR_IMAP_CREDENTIAL_ID",
+          "name": "IMAP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "models/gemini-3.5-flash-lite",
+          "mode": "id"
+        },
+        "text": "=Przeanalizuj załączone zdjęcie paragonu. Zwróć wyłącznie surowy obiekt JSON, bez powitania i znaczników markdown. Obiekt musi zawierać dokładnie:\n\n- \"totalAmount\" (liczba zmiennoprzecinkowa z kropką, np. 12.50)\n- \"date\" (w formacie YYYY-MM-DD)\n- \"categoryId\" (liczba całkowita. Przeanalizuj listę dostępnych kategorii użytkownika: {{ JSON.stringify($('HTTP Request').all().map(item => ({ id: item.json.id, name: item.json.name }))) }}. Dopasuj charakter sklepu lub produktów do najbardziej pasującej kategorii i zwróć jej \"id\". Jeśli kompletnie nic nie pasuje, zwróć null).\n- \"expenseItems\" (tablica obiektów, każdy z kluczami \"name\" i \"amount\". Oczyść nazwy produktów z kodów alfanumerycznych, numerów seryjnych i ciągów cyfr na końcu, zostawiając wyłącznie czytelną nazwę produktu).",
+        "inputType": "binary",
+        "binaryPropertyName": "attachment_0",
+        "simplify": false,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.googleGemini",
+      "typeVersion": 1.2,
+      "position": [
+        368,
+        -32
+      ],
+      "id": "acee6f34-3f3b-41a4-9836-0c9ff29eaf7e",
+      "name": "Analyze an image",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "YOUR_GEMINI_CREDENTIAL_ID",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const rawText = $input.first().json.candidates[0].content.parts[0].text;\nreturn JSON.parse(rawText);"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        576,
+        -32
+      ],
+      "id": "a5d1e55f-fc32-4ff6-b32a-a1add729ca97",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "url": "https://expense-tracker-api-sooty.vercel.app/api/categories/webhook",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "email",
+              "value": "={{ $('Email Trigger (IMAP)').first().json.from.match(/<([^>]+)>/)?.[1] || $('Email Trigger (IMAP)').first().json.from }}"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "YOUR_EXPENSE_TRACKER_API_KEY"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        -48,
+        -160
+      ],
+      "id": "6f6b941e-ebdc-4e85-8607-e2881505888b",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        160,
+        -32
+      ],
+      "id": "e6b50471-7f02-446a-812a-7a3cafb7fcab",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://expense-tracker-api-sooty.vercel.app/api/webhooks/receipts",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "YOUR_EXPENSE_TRACKER_API_KEY"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"email\":\"{{ $('Email Trigger (IMAP)').first().json.from.match(/<([^>]+)>/)?.[1] || $('Email Trigger (IMAP)').first().json.from }}\",\n  \"expenses\": [ {{ JSON.stringify($json) }} ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.5,
+      "position": [
+        784,
+        -32
+      ],
+      "id": "75e5fd49-108e-4b1a-bce3-34142c63a0bc",
+      "name": "HTTP Request1",
+      "onError": "continueRegularOutput"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Email Trigger (IMAP)": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Analyze an image": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Analyze an image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "af554d8b-0ea5-4770-9d87-ae2f29c8aa16",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "nodeGroups": [],
+  "tags": []
+}
