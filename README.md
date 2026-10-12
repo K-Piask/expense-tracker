@@ -13,14 +13,14 @@ Aplikacja jest wdrożona na platformie Vercel.
 
 ---
 
-### 🤖 NAJNOWSZA FUNKCJONALNOŚĆ - Automatyczne przetwarzanie paragonów (AI + n8n)
+## 🤖 NAJNOWSZA FUNKCJONALNOŚĆ - Automatyczne przetwarzanie paragonów (AI + n8n)
 
 Aplikacja posiada zautomatyzowany potok przetwarzania paragonów przesyłanych mailowo, bez konieczności ręcznego wprowadzania danych przez użytkownika. 
 
 Instancja n8n jest wdrożona na darmowym planie platformy Render. Aby zapobiec usypianiu serwera, zewnętrzny Cron Job odpytuje instancję co 10 minut. Dzięki temu automatyzacja działa nieprzerwanie w tle i jest zawsze gotowa do odbioru nowych wiadomości.
 
-#### Jak to działa:
-1. **Odbiór maila**: Wyzwalacz IMAP nasłuchuje na dedykowanej skrzynce wiadomości z załączonymi zdjęciami paragonów.
+### Jak to działa:
+1. **Odbiór maila**: Wyzwalacz IMAP nasłuchuje na dedykowanej skrzynce na wiadomości z załączonymi zdjęciami paragonów.
 2. **Pobranie kontekstu użytkownika**: n8n odpytuje zabezpieczony kluczem API endpoint `GET /api/categories/webhook`, pobierając listę kategorii przypisanych do nadawcy na podstawie jego adresu e-mail.
 3. **Analiza multimodalna (Google Gemini)**: Model analizuje obraz paragonu, wyciąga datę, łączną kwotę, pozycje (czyszcząc nazwy ze śmieciowych kodów kasowych) oraz dopasowuje wydatek do istniejącej kategorii.
 4. **Zapis do bazy**: Wygenerowany i sparsowany JSON trafia do zabezpieczonego kluczem API endpointa `POST /api/webhooks/receipts` (Prisma + PostgreSQL).
@@ -28,8 +28,6 @@ Instancja n8n jest wdrożona na darmowym planie platformy Render. Aby zapobiec u
 ![Schemat przepływu n8n](./docs/n8n_workflow.png)
 
 > Plik z definicją workflow do zaimportowania w n8n: [`automations/n8n-receipt-processing.json`](./automations/n8n-receipt-processing.json)
-
----
 
 ### 🧪 Przetestuj to samodzielnie na żywo!
 
@@ -43,30 +41,35 @@ Zachęcam do przetestowania tej automatyzacji. Cały proces zajmuje tylko chwil�
 
 ---
 
-### 🤖 Automatyczna weryfikacja wyciągów bankowych (RPA / UiPath)
+## 🤖 Automatyczna weryfikacja wyciągów bankowych (RPA / UiPath)
 
 Projekt zawiera dedykowany moduł Robotic Process Automation stworzony w UiPath. Pełni on rolę zautomatyzowanego audytora, który weryfikuje poprawność danych wprowadzonych do systemu (np. tych z n8n) z rzeczywistymi wyciągami bankowymi, wyłapując potencjalne błędy ludzkie.
 
-#### Jak to działa:
+### Jak to działa:
 1. **Logowanie API:** Bot wykonuje request POST do backendu, logując się na konto użytkownika i pobierając dynamiczny token JWT.
 2. **Pobieranie Danych:** Wykonuje autoryzowane żądanie GET, pobiera listę wydatków i parsuje JSON.
 3. **Odczyt Wyciągu:** Wczytuje plik `Statement.xlsx` z eksportem z banku.
-4. **Walidacja in-memory (LINQ):** Za pomocą zapytań VB.NET/LINQ bot przetwarza dane w pamięci. Stosuje *Fuzzy Matching* porównując kwoty i kategorie bez obciążania API.
+4. **Walidacja in-memory (LINQ):** Za pomocą zapytań VB.NET/LINQ bot przetwarza dane w pamięci. Stosuje przybliżone dopasowywanie tekstu, elastycznie porównując kwoty i kategorie z opisami przelewów bankowych, co pozwala na skuteczną weryfikację bez obciążania API.
 5. **Raportowanie:** Generuje wynikowy plik `Report.xlsx` ze statusem dla każdej transakcji (poprawne vs wymagające ręcznej weryfikacji).
 
 **Repozytorium bota RPA:** Zobacz pełny kod oraz wideo demonstracyjne w osobnym repozytorium: [github.com/K-Piask/expense-tracker-reconciliation-rpa](https://github.com/K-Piask/expense-tracker-reconciliation-rpa)
 
 ---
 
-### 🛒 Inteligentne wyszukiwanie promocji (Playwright + AI Embeddings)
+## 🛒 Inteligentne wyszukiwanie promocji (Playwright + AI Embeddings)
 
 Aplikacja posiada własny mechanizm śledzenia promocji w popularnym supermarkecie. Zamiast polegać na prostym dopasowywaniu słów kluczowych, system rozumie kontekst produktów dzięki zastosowaniu wyszukiwania semantycznego (wektorowego).
 
-#### Jak to działa:
-1. **Stealth Scraping (Playwright):** Dedykowany skrypt omija zabezpieczenia anty-botowe, symuluje ludzkie zachowanie (pauzy, losowe przewijanie) i obsługuje *Infinite Scroll*, aby wyciągnąć surowe dane o produktach, cenach i kaucjach z dynamicznie ładowanego DOM.
+### Jak to działa:
+1. **Zaawansowane pobieranie danych (Playwright):** Dedykowany skrypt omija zabezpieczenia anty-botowe, symuluje ludzkie zachowanie (pauzy, losowe przewijanie) i automatycznie doładowuje zawartość podczas przewijania strony, aby wyciągnąć surowe dane o produktach, cenach i kaucjach z dynamicznie ładowanego DOM.
 2. **Generowanie wektorów (Gemini API):** Pobrane dane są wysyłane do modelu `gemini-embedding-001`. AI zamienia nazwy produktów na wielowymiarowe wektory (embeddings), rozumiejąc ich znaczenie (np. wie, że "Kajzerka" i "Chleb" należą do kategorii pieczywa).
 3. **Zapis do bazy (pgvector):** Wektory trafiają do bazy PostgreSQL wykorzystującej rozszerzenie `pgvector`. Skrypt synchronizacyjny dba o aktualność ofert, usuwając przeterminowane promocje.
-4. **Semantyczne dopasowanie:** Podczas tworzenia listy zakupów lub sprawdzania wydatków, aplikacja dopasowuje promocyjne produkty do utworzonych przez Ciebie kategorii i automatycznie przypisuje im odpowiednie obrazy oraz tagi, nawet jeśli nazwy nie pokrywają się w 100%.
+4. **Semantyczne przypisywanie obrazów:** Aplikacja automatycznie dopasowuje promocyjne produkty do wewnętrznych, systemowych kategorii. Dzięki temu w interfejsie każdy produkt otrzymuje odpowiednią ikonę/obrazek, nawet jeśli jego pełna nazwa ze sklepu nie pokrywa się w 100% z nazwą ogólnej kategorii.
+
+### 🧪 Przetestuj to samodzielnie na żywo!
+Mechanizm wyszukiwania i dopasowywania promocji możesz łatwo sprawdzić w aplikacji:
+- **Szybkie wyszukiwanie:** Przejdź do zakładki **Wyszukaj promocje na szybko** i wpisz ogólne hasło (np. "masło" lub "chleb"), aby zobaczyć, jak wyszukiwanie semantyczne radzi sobie z odnajdywaniem konkretnych ofert promocyjnych.
+- **Planowanie zakupów:** Utwórz nową listę w zakładce **Listy zakupów** i dodaj kilka produktów. Następnie w widoku szczegółów kliknij przycisk „Wyświetl promocje”, a system błyskawicznie sprawdzi, czy wybrane przez Ciebie pozycje są obecnie objęte rabatem w sklepie.
 
 ---
 
@@ -94,7 +97,7 @@ Aplikacja posiada własny mechanizm śledzenia promocji w popularnym supermarkec
 | **Backend** | Node.js, Express, Prisma ORM, PostgreSQL, JSON Web Token, bcrypt |
 | **Baza danych** | PostgreSQL (hostowana na platformie Neon), rozszerzenie `pgvector` |
 | **Automatyzacja & RPA** | n8n, UiPath Studio, VB.NET, LINQ |
-| **Dodatkowo** | Gemini API (vision & embeddingi), Scraper oparty o Playwright |
+| **Dodatkowo** | Gemini API (vision & embeddings), Scraper oparty o Playwright |
 
 ---
 
